@@ -1,13 +1,13 @@
 import Laptop from '../models/laptop.js'
 
 export const getLaptops = async (req, res) => {
-    try {
-        const laptops = await Laptop.find()
-        res.json(laptops)
-    } catch (error) {
-        console.log(error.message)
-      res.status(500).json({ error: error.message })
-    }
+  try {
+    const laptops = await Laptop.find()
+    res.json(laptops)
+  } catch (error) {
+    console.log(error.message)
+    res.status(500).json({ error: error.message })
+  }
 }
 
 export const getLaptop = async (req, res) => {
@@ -35,11 +35,11 @@ export const createLaptop = async (req, res) => {
   }
 }
 
-// export const updateLaptop = async (req, res) => {
-//   const { id } = req.params
-//   const laptop = await Laptop.findByIdAndUpdate(id, req.body, { new: true })
-//   res.status(200).json(laptop)
-// }
+export const updateLaptop = async (req, res) => {
+  const { id } = req.params
+  const laptop = await Laptop.findByIdAndUpdate(id, req.body, { new: true })
+  res.status(200).json(laptop)
+}
 
 // export const deleteLaptop = async (req, res) => {
 //   try {
