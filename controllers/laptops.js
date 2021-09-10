@@ -24,16 +24,16 @@ export const getLaptop = async (req, res) => {
   }
 }
 
-// export const createLaptop = async (req, res) => {
-//   try {
-//     const laptop = new Laptop(req.body)
-//     await laptop.save()
-//     res.status(201).json(laptop)
-//   } catch (error) {
-//     console.log(error)
-//     res.status(500).json({ error: error.message })
-//   }
-// }
+export const createLaptop = async (req, res) => {
+  try {
+    const laptop = new Laptop(req.body)
+    await laptop.save()
+    res.status(201).json(laptop)
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: error.message })
+  }
+}
 
 // export const updateLaptop = async (req, res) => {
 //   const { id } = req.params
