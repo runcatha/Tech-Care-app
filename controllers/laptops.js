@@ -10,19 +10,19 @@ export const getLaptops = async (req, res) => {
     }
 }
 
-// export const getLaptop = async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const laptop = await Laptop.findById(id).populate('userId')
-//     if (laptop) {
-//       return res.json(laptop)
-//     }
-//     res.status(404).json({ message: 'Laptop not found!' })
-//   } catch (error) {
-//     console.log(error.message)
-//     res.status(500).json({ error: error.message })
-//   }
-// }
+export const getLaptop = async (req, res) => {
+  try {
+    const { _id } = req.params
+    const laptop = await Laptop.findById(_id)
+    if (laptop) {
+      return res.json(laptop)
+    }
+    res.status(404).json({ message: 'Laptop not found!' })
+  } catch (error) {
+    console.log(error.message)
+    res.status(500).json({ error: error.message })
+  }
+}
 
 // export const createLaptop = async (req, res) => {
 //   try {
