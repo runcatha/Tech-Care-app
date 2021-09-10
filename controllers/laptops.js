@@ -2,10 +2,11 @@ import Laptop from '../models/laptop.js'
 
 export const getLaptops = async (req, res) => {
     try {
-        const laptop = await Laptop.find()
-        res.json(laptop)
+        const laptops = await Laptop.find()
+        res.json(laptops)
     } catch (error) {
-        res.status(500).send(error.message)
+        console.log(error.message)
+      res.status(500).json({ error: error.message })
     }
 }
 
