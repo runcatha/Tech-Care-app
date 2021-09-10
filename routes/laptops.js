@@ -8,6 +8,6 @@ router.get('/laptops', controllers.getLaptops)
 router.get('/laptops/:id', controllers.getLaptop)
 router.post('/laptops', controllers.createLaptop)
 router.put('/laptops/:id', controllers.updateLaptop)
-// router.delete('/laptops/:id', restrict, controllers.deleteLaptop)
+router.delete('/laptops/:id', controllers.deleteLaptop)
 
 export default router

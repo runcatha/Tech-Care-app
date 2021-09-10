@@ -41,16 +41,16 @@ export const updateLaptop = async (req, res) => {
   res.status(200).json(laptop)
 }
 
-// export const deleteLaptop = async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const deleted = await Laptop.findByIdAndDelete(id)
-//     if (deleted) {
-//       return res.status(200).send('Laptop deleted')
-//     }
-//     throw new Error('Laptop not found')
-//   } catch (error) {
-//     console.log(error.message)
-//     res.status(500).json({ error: error.message })
-//   }
-// }
+export const deleteLaptop = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Laptop.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Laptop deleted')
+    }
+    throw new Error('Laptop not found')
+  } catch (error) {
+    console.log(error.message)
+    res.status(500).json({ error: error.message })
+  }
+}
