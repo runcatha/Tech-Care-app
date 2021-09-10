@@ -24,6 +24,6 @@ Upgrading devices from the primary purpose of surfing the internet to coding can
 
 # MVP
 
-The linked list is a full to do list of the project broken down by the day. At the end of the day, the next days tasks will be copied over to the Github projects board.
+The linked list is a full to do list of the project broken down by the day. At the end of the day, the next day's tasks will be copied over to the Github projects board.
 
 https://docs.google.com/document/d/1ZIfBZJcDq02oLkJ7xgyPYzOTnYy5GTl_zvQyZgz0Cf8/edit
