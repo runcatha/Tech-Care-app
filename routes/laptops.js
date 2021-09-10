@@ -5,7 +5,7 @@ import * as controllers from '../controllers/laptops.js'
 const router = Router()
 
 router.get('/laptops', controllers.getLaptops)
-router.get('/laptops/:_id', controllers.getLaptop)
+router.get('/laptops/:id', controllers.getLaptop)
 // router.post('/laptops', restrict, controllers.createLaptop)
 // router.put('/laptops/:id', restrict, controllers.updateLaptop)
 // router.delete('/laptops/:id', restrict, controllers.deleteLaptop)

@@ -12,8 +12,8 @@ export const getLaptops = async (req, res) => {
 
 export const getLaptop = async (req, res) => {
   try {
-    const { _id } = req.params
-    const laptop = await Laptop.findById(_id)
+    const { id } = req.params
+    const laptop = await Laptop.findById(id)
     if (laptop) {
       return res.json(laptop)
     }
