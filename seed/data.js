@@ -7,6 +7,19 @@ const insertData = async () => {
   // reset database
   await db.dropDatabase()
 
+  const user1 = new User({
+    username: 'cathleen',
+    email: 'root@super.gmail.com',
+    password_digest: await bcrypt.hash('!a$ecureP@ssw0Rd55!', 11)
+  })
+  await user1.save()
+
+  const user2 = new User({
+    username: 'esther',
+    email: 'b.anca@super.gmail.com',
+    password_digest: await bcrypt.hash('!$h0pp3R1', 11)
+  })
+  await user2.save()
   const laptops =
     [
       {
