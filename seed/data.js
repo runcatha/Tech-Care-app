@@ -1,7 +1,7 @@
 import db from '../db/connection.js'
 import Laptop from '../models/laptop.js'
-// import User from '../models/user.js'
-// import bcrypt from 'bcrypt'
+import User from '../models/user.js'
+import bcrypt from 'bcrypt'
 
 const insertData = async () => {
   // reset database
@@ -9,17 +9,31 @@ const insertData = async () => {
 
   const user1 = new User({
     username: 'cathleen',
-    email: 'root@super.gmail.com',
-    password_digest: await bcrypt.hash('!a$ecureP@ssw0Rd55!', 11)
+    email: 'carunde8@gmail.com',
+    password_digest: await bcrypt.hash('cathleen!', 11)
   })
   await user1.save()
 
   const user2 = new User({
     username: 'esther',
-    email: 'b.anca@super.gmail.com',
-    password_digest: await bcrypt.hash('!$h0pp3R1', 11)
+    email: 'estherryu77@gmail.com',
+    password_digest: await bcrypt.hash('esther!', 11)
   })
   await user2.save()
+
+  const user3 = new User({
+    username: 'adanne',
+    email: 'audumah94@gmail.com',
+    password_digest: await bcrypt.hash('adanne!', 11)
+  })
+  await user3.save()
+
+  const user3 = new User({
+    username: 'theo',
+    email: '456theochang@gmail.com',
+    password_digest: await bcrypt.hash('theo!', 11)
+  })
+  await user3.save()
   const laptops =
     [
       {
