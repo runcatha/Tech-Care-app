@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css';
 import Home from './screens/Home/Home'
 import Laptops from './screens/Laptops/Laptops'
@@ -8,9 +8,20 @@ import LaptopEdit from './screens/LaptopEdit/LaptopEdit'
 import SignIn from './screens/SignIn/SignIn'
 import SignOut from './screens/SignOut/SignOut'
 import SignUp from './screens/SignUp/SignUp'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
+import { verifyUser } from './services/users'
 
-function App() {
+const App = () => {
+
+  const [user, setUser] = useState(null)
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser()
+      user ? setUser(user) : setUser(null)
+    }
+    fetchUser()
+  }, [])
+
   return (
     <div className="App">
       <Switch>
@@ -42,7 +53,7 @@ function App() {
     </div>
   );
 }
-        
-        
+
+
 
 export default App;

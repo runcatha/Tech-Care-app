@@ -4,7 +4,7 @@ import { Layout } from '../../components'
 import { Redirect } from 'react-router-dom'
 import { createLaptop } from '../../services/laptops'
 
-const ProductCreate = (props) => {
+const LaptopCreate = (props) => {
   const [laptop, setLaptop] = useState({
     image_url: '',
     name: '',
@@ -38,7 +38,7 @@ const ProductCreate = (props) => {
   return (
     <Layout user={props.user}>
       <form className='create-form' onSubmit={handleSubmit}>
-      <input
+        <input
           className='input-image-link'
           placeholder='Image'
           value={laptop.image_url}
