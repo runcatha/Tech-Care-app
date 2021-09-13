@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './ProductEdit.css'
+import './LaptopEdit.css'
 import { useParams, Redirect } from 'react-router-dom'
 import { Layout } from '../../components'
 import { getLaptop, updateLaptop } from '../../services/laptops'
