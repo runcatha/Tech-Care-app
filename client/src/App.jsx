@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 import Home from './screens/Home/Home'
-import Laptop from './screens/Laptops/Laptops'
+import Laptops from './screens/Laptops/Laptops'
 import LaptopCreate from './screens/LaptopCreate/LaptopCreate'
 import LaptopDetail from './screens/LaptopDetail/LaptopDetail'
 import LaptopEdit from './screens/LaptopEdit/LaptopEdit'
@@ -18,19 +18,16 @@ function App() {
           <Home user={user} />
         </Route>
         <Route exact path='/laptops'>
-          < LaptopCards user={user} />
+          < Laptops user={user} />
         </Route>
-        <Route exact path='/details'>
+        <Route exact path='/products/:id'>
           <LaptopDetail user={user} />
         </Route>
         <Route path='/add-laptop' >
           {user ? < LaptopCreate user={user} /> : <Redirect to='/sign-up' />}
         </Route>
-        <Route path='/edit-laptop'>
+        <Route path='/products/:id/edit'>
           {user ? < LaptopEdit user={user} /> : <Redirect to='/sign-up' />}
-        </Route>
-        <Route path='/delete-laptop'>
-          {user ? < LaptopDetail user={user} /> : <Redirect to='/sign-up' />}
         </Route>
         <Route path='/sign-in'>
           <SignIn setUser={setUser} />
@@ -45,5 +42,7 @@ function App() {
     </div>
   );
 }
+        
+        
 
 export default App;

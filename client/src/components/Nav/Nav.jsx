@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom'
 
 const authenticatedOptions = (
     <>
-    <Link className="link" to="/add-laptop">Add Laptpop</NavLink>
-    <Link className="link" to="/laptops/:id/edit">Edit Laptop</NavLink>
+    <Link className="link" to="/add-laptop">Add Laptpop</Link>
+    <Link className="link" to="/laptops/:id/edit">Edit Laptop</Link>
     <NavLink className="link" to="/sign-out">Sign Out</NavLink>
     </>
 )
@@ -18,7 +18,7 @@ const alwaysOptions = (
     <>
     <NavLink className="link" to="/">Home</NavLink>
     <NavLink className="link" to="/laptops">Listing</NavLink>
-    <Link className="link" to="/laptops/:id">Details Page</NavLink>
+    <Link className="link" to="/laptops/:id">Details Page</Link>
     </>
 )
 const Nav = ({ user }) => {
