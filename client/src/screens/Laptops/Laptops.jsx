@@ -15,7 +15,7 @@ const Laptops = (props) => {
   useEffect(() => {
     const fetchLaptops = async () => {
       const allLaptops = await getLaptops()
-      setLaptops(allLaptops.laptops)
+      setLaptops(allLaptops)
       // setSearchResult(allProducts)
     }
     fetchLaptops()
