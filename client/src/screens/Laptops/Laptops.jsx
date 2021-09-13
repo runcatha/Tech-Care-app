@@ -1,7 +1,10 @@
 import { Card } from 'react-bootstrap';
 import './Laptops.css';
 import { useState, useEffect } from 'react'
+
+
 // import laptops from './seed/data.js'
+
 import { Layout, Laptop } from '../../components'
 import { getLaptops } from '../../services/laptops'
 
@@ -23,14 +26,16 @@ const Laptops = (props) => {
 
     <Layout user={props.user}>
       <div className='laptops'>
-        {/* {searchResult.map((product, index) => { */}
-        <Laptop
-          _id={laptops._id}
-          name={laptops.name}
-          image_url={laptops.image_url}
-          price={laptops.price}
-        // key={index}
-        />
+
+        {laptops.map((laptop, index) =>
+          <Laptop
+            _id={laptop._id}
+            name={laptop.name}
+            image_url={laptop.image_url}
+            price={laptop.price}
+            key={index}
+          />
+        )}
 
       </div>
     </Layout>
