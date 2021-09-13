@@ -10,6 +10,7 @@ import SignOut from './screens/SignOut/SignOut'
 import SignUp from './screens/SignUp/SignUp'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { verifyUser } from './services/users'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 
@@ -29,16 +30,16 @@ const App = () => {
           <Home user={user} />
         </Route>
         <Route exact path='/laptops'>
-          < Laptops user={user} />
+          <Laptops user={user} />
         </Route>
-        <Route exact path='/products/:id'>
+        <Route exact path='/laptops/:id'>
           <LaptopDetail user={user} />
         </Route>
         <Route path='/add-laptop' >
           {user ? < LaptopCreate user={user} /> : <Redirect to='/sign-up' />}
         </Route>
-        <Route path='/products/:id/edit'>
-          {user ? < LaptopEdit user={user} /> : <Redirect to='/sign-up' />}
+        <Route path='/laptops/:id/edit'>
+          {user ? <LaptopEdit user={user} /> : <Redirect to='/sign-up' />}
         </Route>
         <Route path='/sign-in'>
           <SignIn setUser={setUser} />
