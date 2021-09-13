@@ -1,6 +1,7 @@
 import { Card } from 'react-bootstrap';
 import './Laptops.css';
 import { useState, useEffect } from 'react'
+import {Link} from 'react-router-dom'
 
 
 // import laptops from './seed/data.js'
@@ -33,7 +34,11 @@ const Laptops = (props) => {
             price={laptop.price}
             key={index}
           />
+
         )}
+        <Link className="link" to="/add-laptop">
+          <button>Add Laptop</button>
+        </Link>
       </div>
     </Layout>
   )

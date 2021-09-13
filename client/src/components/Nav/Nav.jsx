@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 
 const authenticatedOptions = (
   <>
-    <Link className="link" to="/add-laptop">Add Laptpop</Link>
+    {/* <Link className="link" to="/add-laptop">Add Laptop</Link> */}
     <Link className="link" to="/laptops/:id/edit">Edit Laptop</Link>
     <NavLink className="link" to="/sign-out">Sign Out</NavLink>
   </>
@@ -16,7 +16,7 @@ const unauthenticatedOptions = (
 )
 const alwaysOptions = (
   <>
-    <NavLink className="link" to="/laptops">Listing</NavLink>
+    <NavLink className="link" to="/laptops">Laptops</NavLink>
     <Link className="link" to="/laptops/:id">Details Page</Link>
   </>
 )
