@@ -1,6 +1,6 @@
 import { Card } from 'react-bootstrap';
 import './Laptops.css';
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 import { Layout, Laptop } from '../../components'
 import { getLaptops } from '../../services/laptops'
@@ -20,30 +20,30 @@ const Laptops = (props) => {
 
 
   return (
-          
+
     <Layout user={props.user}>
       <div className='laptops'>
-        {/* {searchResult.map((product, index) => { */}
+        {laptops.map((laptop, index) =>
           <Laptop
-            _id={laptops._id}
-            name={laptops.name}
-            imgURL={laptops.image_url}
-            price={laptops.price}
-            // key={index}
+            _id={laptop._id}
+            name={laptop.name}
+            image_url={laptop.image_url}
+            price={laptop.price}
+            key={index}
           />
-        
-          </div>
-      </Layout>
-          
-   
-      
-      
-      )
-    }
-         
-          
-         
-          
+        )}
+      </div>
+    </Layout>
+
+
+
+
+  )
+}
+
+
+
+
 
 
 export default Laptops;

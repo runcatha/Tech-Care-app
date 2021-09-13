@@ -10,7 +10,7 @@ import SignOut from './screens/SignOut/SignOut'
 import SignUp from './screens/SignUp/SignUp'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { verifyUser } from './services/users'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 
