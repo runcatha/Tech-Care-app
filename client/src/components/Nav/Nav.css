@@ -1,3 +1,22 @@
 .nav{
   grid-area: N;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+#home-link{
+  height: 140px;
+}
+.links{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 40%;
+  justify-content: space-evenly;
+}
+.link{
+  text-decoration: none;
+    color: black;
+    font: Roboto;
+}
+

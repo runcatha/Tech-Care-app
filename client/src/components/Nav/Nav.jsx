@@ -16,7 +16,6 @@ const unauthenticatedOptions = (
 )
 const alwaysOptions = (
   <>
-    <NavLink className="link" to="/">Home</NavLink>
     <NavLink className="link" to="/laptops">Listing</NavLink>
     <Link className="link" to="/laptops/:id">Details Page</Link>
   </>
@@ -25,7 +24,11 @@ const Nav = ({ user }) => {
   return (
     <nav>
       <div className="nav">
-        <NavLink className="logo" to="/">Tech-Care App</NavLink>
+        <NavLink className="logo" to="/">
+          <img src='https://i.imgur.com/qYcMJPz.png?1'
+            alt='home'
+            id='home-link' />
+        </NavLink>
         <div className="links">
           {user && <div className="link welcome">Welcome, {user.username}</div>}
           {alwaysOptions}
