@@ -3,6 +3,7 @@
 }
 
 .mega-grid{
+  background-color: #EEEEEE;
   display: grid;
   grid-template-rows: 100px 600px;
   grid-template-columns: 1fr;
