@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.mega-grid{
+  display: grid;
+  grid-template-rows: 100px 600px;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  'N'
+  'C'
+  }
 .App-logo {
   height: 40vmin;
   pointer-events: none;

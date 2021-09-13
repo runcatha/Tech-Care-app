@@ -25,32 +25,34 @@ const App = () => {
 
   return (
     <div className="App">
-      <Switch>
-        <Route exact path='/'>
-          <Home user={user} />
-        </Route>
-        <Route exact path='/laptops'>
-          <Laptops user={user} />
-        </Route>
-        <Route exact path='/laptops/:id'>
-          <LaptopDetail user={user} />
-        </Route>
-        <Route path='/add-laptop' >
-          {user ? < LaptopCreate user={user} /> : <Redirect to='/sign-up' />}
-        </Route>
-        <Route path='/laptops/:id/edit'>
-          {user ? <LaptopEdit user={user} /> : <Redirect to='/sign-up' />}
-        </Route>
-        <Route path='/sign-in'>
-          <SignIn setUser={setUser} />
-        </Route>
-        <Route path='/sign-up'>
-          <SignUp setUser={setUser} />
-        </Route>
-        <Route path='/sign-out'>
-          <SignOut setUser={setUser} />
-        </Route>
-      </Switch>
+      <div className='.mega-grid'>
+        <Switch>
+          <Route exact path='/'>
+            <Home user={user} />
+          </Route>
+          <Route exact path='/laptops'>
+            <Laptops user={user} />
+          </Route>
+          <Route exact path='/laptops/:id'>
+            <LaptopDetail user={user} />
+          </Route>
+          <Route path='/add-laptop' >
+            {user ? < LaptopCreate user={user} /> : <Redirect to='/sign-up' />}
+          </Route>
+          <Route path='/laptops/:id/edit'>
+            {user ? <LaptopEdit user={user} /> : <Redirect to='/sign-up' />}
+          </Route>
+          <Route path='/sign-in'>
+            <SignIn setUser={setUser} />
+          </Route>
+          <Route path='/sign-up'>
+            <SignUp setUser={setUser} />
+          </Route>
+          <Route path='/sign-out'>
+            <SignOut setUser={setUser} />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 }
