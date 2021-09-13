@@ -16,6 +16,7 @@ const Laptops = (props) => {
     const fetchLaptops = async () => {
       const allLaptops = await getLaptops()
       setLaptops(allLaptops)
+
     }
     fetchLaptops()
   }, [])
