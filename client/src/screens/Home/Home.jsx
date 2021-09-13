@@ -1,4 +1,5 @@
 import { Layout } from '../../components'
+import { Redirect, Link } from 'react-router-dom'
 import './Home.css'
 
 const Home = (props) => {
@@ -36,10 +37,12 @@ const Home = (props) => {
             </div>
             <div className='home-mission-statment-link'>
               <div className='home-mission-statement'>
-                <p></p>
+                <p>fdasdfas</p>
               </div>
               <div className='home-browse-selection-link'>
-
+                <Link to='/laptops' >
+                  <h3>browse our selection</h3>
+                </Link>
               </div>
             </div>
           </div>
