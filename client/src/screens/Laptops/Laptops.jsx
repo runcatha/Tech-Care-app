@@ -15,18 +15,15 @@ const Laptops = (props) => {
   useEffect(() => {
     const fetchLaptops = async () => {
       const allLaptops = await getLaptops()
-      setLaptops(allLaptops.laptops)
-      // setSearchResult(allProducts)
+      setLaptops(allLaptops)
     }
     fetchLaptops()
   }, [])
 
 
   return (
-
     <Layout user={props.user}>
       <div className='laptops'>
-
         {laptops.map((laptop, index) =>
           <Laptop
             _id={laptop._id}
@@ -36,13 +33,8 @@ const Laptops = (props) => {
             key={index}
           />
         )}
-
       </div>
     </Layout>
-
-
-
-
   )
 }
 
