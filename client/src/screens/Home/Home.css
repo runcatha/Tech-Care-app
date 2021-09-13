@@ -1,0 +1,35 @@
+.home{
+  grid-area: C;
+}
+#home-img{
+  width: 100%;
+}
+.home-pg-content{
+  display: flex;
+  flex-direction: row;
+}
+.home-title-logos{
+  width: 50%;
+}
+.home-logos-desc{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+.home-vs{
+/* display: flex;
+flex-direction: column; */
+}
+#vs-code{
+  /* height: 67%;
+  width: 24%; */
+}
+.home-cpu{
+
+}
+.home-ram{
+
+}
+.home-mission-statment-link{
+  width: 50%;
+}
