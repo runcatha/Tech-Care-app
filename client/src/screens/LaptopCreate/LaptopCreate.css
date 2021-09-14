@@ -1,0 +1,61 @@
+.create-form-content-container{
+  grid-area: C;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+#doggo-programmer{
+  width: 65%;
+}
+.create-form{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  justify-content: space-evenly;
+  padding: 0% 2%;
+}
+.input-image-link{
+  border-style: none;
+  background-color: #c4c4c4;
+}
+.input-name{
+  border-style: none;
+  background-color: #c4c4c4;
+}
+.input-price{
+  border-style: none;
+  background-color: #c4c4c4;
+}
+.textarea-description{
+  border-style: none;
+  background-color: #c4c4c4;
+}
+.input-processor{
+  border-style: none;
+  background-color: #c4c4c4;
+}
+.input-memory{
+  border-style: none;
+  background-color: #c4c4c4;
+}
+.input-hardrive{
+  border-style: none;
+  background-color: #c4c4c4;
+}
+.input-buy-link{
+  border-style: none;
+  background-color: #c4c4c4;
+}
+.add-form-button-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 7%;
+}
+.add-form-submit-button{
+  color: black;
+  background-color: #B3D7EC;
+  border-style: none;
+  height: 7vh;
+  width: 20vw;
+}
