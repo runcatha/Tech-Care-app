@@ -65,7 +65,7 @@ const SignIn = (props) => {
           <div className='signin-user'>
             <img src='https://i.imgur.com/iKGsf9v.png'
               alt='email'
-              id='signin-image' />
+              id='signin-email-logo' />
             <input
               required
               id='signin-email-id'
@@ -80,7 +80,7 @@ const SignIn = (props) => {
           <div className='signin-user'>
             <img src='https://i.imgur.com/WbAsAQV.png'
               alt='username'
-              id='signin-image' />
+              id='signin-username-logo' />
             <input
               required
               id='signin-username-id'
@@ -92,6 +92,10 @@ const SignIn = (props) => {
               className='signin-input'
             />
           </div>
+          <div>
+            <img src='https://i.imgur.com/IFrULuW.png'
+              alt='password'
+              id='signin-password-logo' />
             <input
               required
               id='signin-password-id'
