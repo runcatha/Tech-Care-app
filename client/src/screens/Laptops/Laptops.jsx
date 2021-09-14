@@ -40,10 +40,10 @@ const Laptops = (props) => {
             </Link>
 
         )}
-        <Link className="link" to="/add-laptop">
-          <button>Add Laptop</button>
-        </Link>
         </div>
+        <Link className="link" to="/add-laptop">
+          <button className='add-button'>Add Laptop</button>
+        </Link>
         
     </Layout>
   )

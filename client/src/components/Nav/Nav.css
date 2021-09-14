@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: #fafafa;
+  text: #514538;
 }
 #home-link{
   height: 140px;
