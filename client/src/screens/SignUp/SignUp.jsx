@@ -31,7 +31,7 @@ const SignUp = (props) => {
         const user = await signUp(form)
         setUser(user)
         history.push('/')
-      } else { throw 'Sign Up Details Invalid'}
+      } else { throw 'Sign Up Details Invalid' }
     } catch (error) {
       console.error(error)
       setForm({
@@ -55,7 +55,7 @@ const SignUp = (props) => {
         </button>
       )
     } else {
-      return <button type='submit' className='sign-up-button'>Sign Up</button>
+      return <button type='submit' className='sign-up-button'>Welcome!</button>
     }
   }
   const { username, email, password, passwordConfirmation } = form
@@ -67,65 +67,69 @@ const SignUp = (props) => {
         <div className='form-container'>
 
           <form onSubmit={onSignUp} className='form-sign-up'>
-            <h2 className='h2-sign-up'>Sign Up</h2>
-            <div className="sign-up-div">
 
-              <img src='https://i.imgur.com/WbAsAQV.png' alt='user' className='sign-up-image' />
-              <input
-                required
-                type='text'
-                name='username'
-                value={username}
-                placeholder='Enter username'
-                onChange={handleChange}
-                className='sign-up-input'
-              />
+            <div className='sign-up-background'>
+
+              <h2 className='h2-sign-up'>Sign Up</h2>
+
+              <div className="sign-up-div">
+                <img src='https://i.imgur.com/WbAsAQV.png' alt='user' className='sign-up-image' />
+                <input
+                  required
+                  type='text'
+                  name='username'
+                  value={username}
+                  placeholder='Enter username'
+                  onChange={handleChange}
+                  className='sign-up-input'
+                />
+              </div>
+
+              <div className="sign-up-div">
+
+                <img src='https://i.imgur.com/iKGsf9v.png' alt='email' className='sign-up-image' />
+                <input
+                  required
+                  type='email'
+                  name='email'
+                  value={email}
+                  placeholder='Enter email'
+                  onChange={handleChange}
+                  className='sign-up-input'
+                />
+              </div>
+
+              <div className="sign-up-div">
+                <img src='https://i.imgur.com/IFrULuW.png' alt='password' className='sign-up-image' />
+                <input
+                  required
+                  name='password'
+                  value={password}
+                  type='password'
+                  placeholder='Password'
+                  onChange={handleChange}
+                  className='sign-up-input'
+                />
+              </div>
+              <div className="sign-up-div">
+
+                <img src='https://i.imgur.com/IFrULuW.png' alt='password' className='sign-up-image' />
+                <input
+                  required
+                  name='passwordConfirmation'
+                  value={passwordConfirmation}
+                  type='password'
+                  placeholder='Confirm Password'
+                  onChange={handleChange}
+                  className='sign-up-input'
+                />
+              </div>
             </div>
 
-            <div className="sign-up-div">
-
-              <img src='https://i.imgur.com/iKGsf9v.png' alt='email' className='sign-up-image' />
-              <input
-                required
-                type='email'
-                name='email'
-                value={email}
-                placeholder='Enter email'
-                onChange={handleChange}
-                className='sign-up-input'
-              />
+            <div className='div-welcome'>
+              {renderError()}
             </div>
-
-            <div className="sign-up-div">
-              <img src='https://i.imgur.com/IFrULuW.png' alt='password' className='sign-up-image' />
-              <input
-                required
-                name='password'
-                value={password}
-                type='password'
-                placeholder='Password'
-                onChange={handleChange}
-                className='sign-up-input'
-              />
-            </div>
-            <div className="sign-up-div">
-
-              <img src='https://i.imgur.com/IFrULuW.png' alt='password' className='sign-up-image' />
-              <input
-                required
-                name='passwordConfirmation'
-                value={passwordConfirmation}
-                type='password'
-                placeholder='Confirm Password'
-                onChange={handleChange}
-                className='sign-up-input'
-              />
-            </div>
-            {renderError()}
           </form>
-          <div className='sign-up-welcome'>
-            <h1 className='h1-sign-up'>Welcome!</h1>
-          </div>
         </div>
       </Layout>
     </>

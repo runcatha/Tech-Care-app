@@ -1,9 +1,11 @@
 .sign-in-background{
    background-image: url('https://i.imgur.com/q3y2ctF.jpg');
+   background-position: center;
    background-size: cover;
    display: flex;
   flex-direction: column;
   padding-bottom: 20%;
+  margin-top: 2%;
 }
 
 .h2-log-in{
@@ -26,45 +28,35 @@
   display: grid;
   grid-template-rows: 80% 20%;
 }
-.signin-email{
-  background-color: #EEEEEE
+
+.signin-input{
+  border: none;
+  background-color: #eeeeeeb5;
+  height: 50px;
+  font-size: 120%;
+  padding-left: 25px;
+  width: 27%;
+  margin-left: 2%;
 }
-#signin-email-logo{
-  height: 55px;
-}
-#signin-email-id{
-  border-style: none;
-  background-color: #EEEEEE;
-  font-size: 20px;
-  width: 320px;
-  margin-left: 1%;
-}
+
 .signin-username{
   background-color: #EEEEEE;
   margin-top: 2%;
   margin-bottom: 2%;
 }
-#signin-username-logo{
+
+#signin-email-logo{
   height: 55px;
 }
-#signin-username-id{
-  border-style: none;
-  background-color: #EEEEEE;
-  font-size: 20px;
-  width: 320px;
-  margin-left: 1%;
+
+#signin-username-logo{
+  height: 55px;
 }
 
 #signin-password-logo{
   height: 55px;
 }
-#signin-password-id{
-  border-style: none;
-  background-color: #EEEEEE;
-  font-size: 20px;
-  width: 320px;
-  margin-left: 1%;
-}
+
 #signin-submit-button{
   color: black;
   background-color: #B3D7EC;
@@ -86,6 +78,5 @@
     color: black;
     font: Roboto;
     font-size: 20px;
-    
 }
 
