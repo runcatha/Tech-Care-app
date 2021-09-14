@@ -37,7 +37,7 @@ const insertData = async () => {
   const laptops =
     [
       {
-        image_url: "https://i.imgur.com/yl97Avw.jpg",
+        image_url: "https://i.imgur.com/RTEHReW.jpg",
         name: 'Dell XPS 15 (2020)',
         price: '1,059.99',
         description: `The Dell XPS 15 (2020) is in our view the best laptop for programming right now. As with previous XPS laptops, this 15-inch beauty combines a stunning design, excellent build quality and some of the most powerful mobile components you'll find in a laptop.
@@ -49,7 +49,7 @@ const insertData = async () => {
         buy_link: 'https://www.dell.com/en-us/shop/dell-laptops/xps-15-laptop/spd/xps-15-9500-laptop/x[…]GjFaucVfgQUr06nphJ_ijZkI47YKDrA8taGlDRZAxdbxtoafQxtlTp3zfL1l_8'
       },
       {
-        image_url: "https://i.imgur.com/qQL3o35.jpg",
+        image_url: "https://i.imgur.com/qQL3o35s.jpg",
         name: 'Apple MacBook Air (M1, 2020)',
         price: '1,249.00',
         description: `-- Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power. ---`,
