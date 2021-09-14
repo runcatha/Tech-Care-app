@@ -26,9 +26,12 @@ const SignUp = (props) => {
     event.preventDefault()
     const { setUser } = props
     try {
-      const user = await signUp(form)
-      setUser(user)
-      history.push('/')
+      if (password === passwordConfirmation) {
+
+        const user = await signUp(form)
+        setUser(user)
+        history.push('/')
+      } else { throw 'Sign Up Details Invalid'}
     } catch (error) {
       console.error(error)
       setForm({
