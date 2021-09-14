@@ -44,7 +44,8 @@
 
 
 .sign-up-button{
-  border: none;
+  border: solid 1px black;
+  border-radius: 5px;
   background-color: #B3D7EC;
   margin-top: 2%;
   text-align: right;

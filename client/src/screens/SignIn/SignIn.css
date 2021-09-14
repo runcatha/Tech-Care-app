@@ -1,3 +1,10 @@
+.signin-form{
+  background-size: cover;
+  margin-bottom: 1%;
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+
 .sign-in-background{
    background-image: url('https://i.imgur.com/q3y2ctF.jpg');
    background-position: center;
@@ -11,8 +18,8 @@
 .h2-log-in{
   text-align: left;
   margin-left: 7%;
-  margin-bottom: 11%;
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 4%;
 }
 
 .signin-user{
@@ -22,17 +29,13 @@
   margin-bottom: 3%;
 }
 
-.signin-form{
-  background-size: cover;
-  margin-bottom: 1%;
-  display: grid;
-  grid-template-rows: 80% 20%;
-}
+
 
 .signin-input{
   border: none;
   background-color: #eeeeeeb5;
-  height: 50px;
+  position: static;
+  height: 100%;
   font-size: 120%;
   padding-left: 25px;
   width: 27%;
@@ -60,7 +63,8 @@
 #signin-submit-button{
   color: black;
   background-color: #B3D7EC;
-  border-style: none;
+  border-style: black 1px solid;
+  border-radius: 5px;
   height: 9vh;
   width: 20vw;
   font-size: 20px;
