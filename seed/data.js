@@ -61,7 +61,7 @@ const insertData = async () => {
       {
         image_url: "https://i.imgur.com/EpltLRK.jpg",
         name: 'LG Gram 17 (2021)',
-        price: '$1,689',
+        price: '1,689',
         description: `If you're after a large-screen laptop to do your coding on, then the LG Gram 17 (2021) is the perfect choice. It has a gorgeous screen that's high resolution and large, giving you plenty of workspace. However, this is a laptop that proves you don't have to sacrifice portability and comfort for screen size, as it's impressively light. This means you can comfortably carry it around with you – perfect for anyone who travels a lot.
 
         It's also got one of the best battery lives we've seen in a Windows 10 laptop, mainly thanks to the new Intel 11th generation hardware that's powering this new laptop for 2021. So, you can work anywhere you like, safe in the knowledge that the battery will easily last you a whole work day – and longer.`,
@@ -73,7 +73,7 @@ const insertData = async () => {
       {
         image_url: "https://i.imgur.com/DsBoc9P.jpg",
         name: 'Huawei MateBook 13',
-        price: '$926.99',
+        price: '926.99',
         description: `The Huawei MateBook 13 is one of the best laptops for programming, especially for coders on a budget. Huawei is perhaps best known for its excellent smartphones, which won over critics by offering the kind of features and build quality you'd expect from more expensive competitors, and it's done the same with its laptops.
 
         For a (relatively) modest asking price, you’re getting all the power of a Core i5 or Core i7, a crisp, bright, high-resolution 13-inch display, and loads of SSD storage.
@@ -89,7 +89,7 @@ const insertData = async () => {
       {
         image_url: "https://i.imgur.com/snpFfkJ.jpg",
         name: 'MacBook Pro 13-inch (M1, 2020)',
-        price: '$1,199',
+        price: '1,199',
         description: `The latest MacBook Pro from Apple is a brilliant laptop for programming on. It features Apple's own M1 chip, like the new MacBook Air, and this allows it to run apps with ease, and compile code quickly.
 
         It'll run your programming tools without any issues, and it comes with the Touch Bar across the top of the keyboard, giving you quick access to tools and shortcuts, and can dramatically speed up your workflow.
@@ -105,7 +105,7 @@ const insertData = async () => {
       {
         image_url: "https://i.imgur.com/YrEKnqv.jpg",
         name: 'Microsoft Surface Laptop 4',
-        price: '$999.99',
+        price: '999.99',
         description: `If you're a programmer working on Windows 10 apps in particular, then the Surface Laptop 4 could be the best laptop for you. As it's made by Microsoft, this is a brilliant showcase for Windows 10, so you can be sure your Windows apps run perfectly on the operating system. It'll also likely be one of the first devices to be offered an upgrade to Windows 11 when it launches towards the end of 2021, so if you want to make sure your app runs on that upcoming operating system as well, this could be a great investment.
 
         While Microsoft is best known as a software company, it's been making some great hardware recently as well, and the Surface Laptop 4 is a great example of this, with a stylish design, a solid aluminium shell and a very comfortable keyboard. 
@@ -121,7 +121,7 @@ const insertData = async () => {
       {
         image_url: "https://i.imgur.com/D1UJuPb.jpg",
         name: 'Dell Inspiron 14 5000',
-        price: '$755.63',
+        price: '755.63',
         description: `The Dell Inspiron 14 5000 is a great all-round laptop for programming, and it costs a lot less than many of the laptops on this list, but without skimping on features or performance.
 
         So, it's got a high resolution Full HD display, a quad-core processor and fast SSD storage, all of which means this is a dependable laptop that will keep up with any of your demands while you're programming.
@@ -135,7 +135,7 @@ const insertData = async () => {
       {
         image_url: "https://i.imgur.com/bLwdOA5.jpg",
         name: 'Lenovo ThinkPad P1 (Gen 2)',
-        price: '$1,559',
+        price: '1,559',
         description: `If you're after a laptop to take your programming to another level, then the Lenovo ThinkPad P1 is worth considering.
 
         This seriously powerful workstation laptop offers professional-grade Xeon processors, with up to six cores, an Nvidia Quadro T2000 graphics card and up to 64GB of memory.
@@ -153,7 +153,7 @@ const insertData = async () => {
       {
         image_url: "https://i.imgur.com/20Je5Y3.jpg",
         name: 'HP Envy 13',
-        price: '$619.99',
+        price: '619.99',
         description: `The new HP Envy 13 is a great pick for programmers looking for a stylish yet dependable laptop to work on. 
 
         HP recently made big changes to this popular 13-inch laptop by reducing the size and weight. Coupled with a high-quality touch-sensitive display, it’s both powerful and super portable. It's also overhauled the body of the laptop, giving it a luxurious all-metal design that gives this laptop a beautiful premium look and feel, while also protecting it from knocks and bumps. It certainly earns the ‘Envy’ moniker - use this in an office and you'll be getting appreciative glances from your co-workers.
