@@ -39,7 +39,7 @@ const insertData = async () => {
       {
         image_url: "https://i.imgur.com/RTEHReW.jpg",
         name: 'Dell XPS 15 (2020)',
-        price: '1,059.99',
+        price: '1059.99',
         description: `The Dell XPS 15 (2020) is in our view the best laptop for programming right now. As with previous XPS laptops, this 15-inch beauty combines a stunning design, excellent build quality and some of the most powerful mobile components you'll find in a laptop.
     It's thin and light, which not only means this looks and feels like a premium laptop for programming on, but it's also comfortable to carry around with you as well. It's high resolution 15.6-inch display is great for working on, and with high-end processors (and even graphics cards in some configurations), the Dell XPS 15 can compile code incredibly fast – making it ideal for programmers. Plus, if you go for a model with a GPU by Nvidia, you can test out your games while coding them.
     Perhaps best of all, its battery life is excellent, which means you don't have to be tethered to a desk if you want to use this powerful laptop.`,
@@ -49,9 +49,9 @@ const insertData = async () => {
         buy_link: 'https://www.dell.com/en-us/shop/dell-laptops/xps-15-laptop/spd/xps-15-9500-laptop/x[…]GjFaucVfgQUr06nphJ_ijZkI47YKDrA8taGlDRZAxdbxtoafQxtlTp3zfL1l_8'
       },
       {
-        image_url: "https://i.imgur.com/qQL3o35s.jpg",
+        image_url: "https://i.imgur.com/mWUv1nn.jpg",
         name: 'Apple MacBook Air (M1, 2020)',
-        price: '1,249.00',
+        price: '1249.00',
         description: `-- Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power. ---`,
         processor: 'Apple M1 Chip',
         memory: '8 GB Ram - 3733MHz LPDDR4X',
@@ -61,7 +61,7 @@ const insertData = async () => {
       {
         image_url: "https://i.imgur.com/EpltLRK.jpg",
         name: 'LG Gram 17 (2021)',
-        price: '1,689',
+        price: '1689.00',
         description: `If you're after a large-screen laptop to do your coding on, then the LG Gram 17 (2021) is the perfect choice. It has a gorgeous screen that's high resolution and large, giving you plenty of workspace. However, this is a laptop that proves you don't have to sacrifice portability and comfort for screen size, as it's impressively light. This means you can comfortably carry it around with you – perfect for anyone who travels a lot.
 
         It's also got one of the best battery lives we've seen in a Windows 10 laptop, mainly thanks to the new Intel 11th generation hardware that's powering this new laptop for 2021. So, you can work anywhere you like, safe in the knowledge that the battery will easily last you a whole work day – and longer.`,
@@ -89,7 +89,7 @@ const insertData = async () => {
       {
         image_url: "https://i.imgur.com/snpFfkJ.jpg",
         name: 'MacBook Pro 13-inch (M1, 2020)',
-        price: '1,199',
+        price: '1199.00',
         description: `The latest MacBook Pro from Apple is a brilliant laptop for programming on. It features Apple's own M1 chip, like the new MacBook Air, and this allows it to run apps with ease, and compile code quickly.
 
         It'll run your programming tools without any issues, and it comes with the Touch Bar across the top of the keyboard, giving you quick access to tools and shortcuts, and can dramatically speed up your workflow.
@@ -135,7 +135,7 @@ const insertData = async () => {
       {
         image_url: "https://i.imgur.com/bLwdOA5.jpg",
         name: 'Lenovo ThinkPad P1 (Gen 2)',
-        price: '1,559',
+        price: '1559.00',
         description: `If you're after a laptop to take your programming to another level, then the Lenovo ThinkPad P1 is worth considering.
 
         This seriously powerful workstation laptop offers professional-grade Xeon processors, with up to six cores, an Nvidia Quadro T2000 graphics card and up to 64GB of memory.
@@ -151,7 +151,7 @@ const insertData = async () => {
         buy_link: 'https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/p1-gen-2/22ws2wpp102'
       },
       {
-        image_url: "https://i.imgur.com/20Je5Y3.jpg",
+        image_url: "https://i.imgur.com/G7BQ8wd.jpg",
         name: 'HP Envy 13',
         price: '619.99',
         description: `The new HP Envy 13 is a great pick for programmers looking for a stylish yet dependable laptop to work on. 
