@@ -50,7 +50,7 @@ const SignIn = (props) => {
         </button>
       )
     } else {
-      return <button id='signin-submit-button' type='submit'>Sign In</button>
+      return <button id='signin-submit-button' type='submit' className='sign-in-button'>Sign In</button>
     }
   }
 
@@ -59,16 +59,12 @@ const SignIn = (props) => {
   return (
     <Layout user={props.user}>
       <div className='signin-content-container'>
-        <h3>Log In</h3>
-        <form
-          className='signin-form'
-          onSubmit={onSignIn}>
-          <div className='signin-email'>
-            <label>
-              <img src='https://i.imgur.com/iKGsf9v.png'
-                alt='email'
-                id='signin-email-logo' />
-            </label>
+        <h2 className='h2-log-in'>Log In</h2>
+        <form className='signin-form' onSubmit={onSignIn}>
+          <div className='signin-user'>
+            <img src='https://i.imgur.com/iKGsf9v.png'
+              alt='email'
+              id='signin-image' />
             <input
               required
               id='signin-email-id'
@@ -77,14 +73,13 @@ const SignIn = (props) => {
               value={email}
               placeholder='Email'
               onChange={handleChange}
+              className='signin-input'
             />
           </div>
-          <div className='signin-username'>
-            <label>
-              <img src='https://i.imgur.com/WbAsAQV.png'
-                alt='username'
-                id='signin-username-logo' />
-            </label>
+          <div className='signin-user'>
+            <img src='https://i.imgur.com/WbAsAQV.png'
+              alt='username'
+              id='signin-image' />
             <input
               required
               type='text'
@@ -92,13 +87,13 @@ const SignIn = (props) => {
               value={username}
               placeholder='Username'
               onChange={handleChange}
+              className='signin-input'
             />
           </div>
-          <div className='signin-password'>
-            <label><img src='https://i.imgur.com/IFrULuW.png'
+          <div className='signin-user'>
+            <img src='https://i.imgur.com/IFrULuW.png'
               alt='password'
-              id='signin-password-logo' />
-            </label>
+              id='signin-image' />
             <input
               required
               name='password'
@@ -106,6 +101,7 @@ const SignIn = (props) => {
               type='password'
               placeholder='Password'
               onChange={handleChange}
+              className='signin-input'
             />
           </div>
           {renderError()}

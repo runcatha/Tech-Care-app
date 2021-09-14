@@ -1,32 +1,44 @@
 .signin-content-container{
-  grid-area: C;
+ background-image: url('https://i.imgur.com/WAlnyru.png');
+ background-size: cover;
+ height: 100%;
+}
+
+.h2-log-in{
+text-align: left;
+margin-left: 5%;
+margin-bottom: 11%;
+}
+
+#signin-image{
+  height: 60px;
+  width: 60px;
+}
+
+.signin-user{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-left: 29%;
+  margin-bottom: 3%;
 }
-.signin-form{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.signin-email{
 
+.signin-input{
+  border: none;
+  background-color: #eeeeeeb5;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 14px;
+  width: 50%;
+  margin-top: 4px;
 }
-#signin-email-logo{
-  height: 5vh;
-}
-#signin-email-id{
 
-}
-.signin-username{
+.sign-in-button{
+  border: none;
+  width: 20%;
+  height: 35px;
+  font-size: 20px;
+  margin-bottom: 10%;
+  margin-top: 2%;
+  background-color: #eeeeeebd;
+  }
 
-}
-.signin-password{
-
-}
-#signin-password-logo{
-  height: 5vh;
-}
-#signin-submit-button{
-
-}
