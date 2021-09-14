@@ -50,7 +50,7 @@ const SignIn = (props) => {
         </button>
       )
     } else {
-      return <button type='submit'>Sign In</button>
+      return <button id='signin-submit-button' type='submit'>Sign In</button>
     }
   }
 
@@ -59,37 +59,55 @@ const SignIn = (props) => {
   return (
     <Layout user={props.user}>
       <div className='signin-content-container'>
-        <h3>Sign In</h3>
+        <h3>Log In</h3>
         <form
-          id='signin-form'
+          className='signin-form'
           onSubmit={onSignIn}>
-          <label>Email</label>
-          <input
-            required
-            type='text'
-            name='email'
-            value={email}
-            placeholder='Enter Email'
-            onChange={handleChange}
-          />
-          <label>Username</label>
-          <input
-            required
-            type='text'
-            name='username'
-            value={username}
-            placeholder='Enter Username'
-            onChange={handleChange}
-          />
-          <label>Password</label>
-          <input
-            required
-            name='password'
-            value={password}
-            type='password'
-            placeholder='Password'
-            onChange={handleChange}
-          />
+          <div className='signin-email'>
+            <label>
+              <img src='https://i.imgur.com/iKGsf9v.png'
+                alt='email'
+                id='signin-email-logo' />
+            </label>
+            <input
+              required
+              id='signin-email-id'
+              type='text'
+              name='email'
+              value={email}
+              placeholder='Email'
+              onChange={handleChange}
+            />
+          </div>
+          <div className='signin-username'>
+            <label>
+              <img src='https://i.imgur.com/WbAsAQV.png'
+                alt='username'
+                id='signin-username-logo' />
+            </label>
+            <input
+              required
+              type='text'
+              name='username'
+              value={username}
+              placeholder='Username'
+              onChange={handleChange}
+            />
+          </div>
+          <div className='signin-password'>
+            <label><img src='https://i.imgur.com/IFrULuW.png'
+              alt='password'
+              id='signin-password-logo' />
+            </label>
+            <input
+              required
+              name='password'
+              value={password}
+              type='password'
+              placeholder='Password'
+              onChange={handleChange}
+            />
+          </div>
           {renderError()}
         </form>
       </div>
