@@ -25,8 +25,11 @@ const Laptops = (props) => {
 
   return (
     <Layout user={props.user}>
+      
       <div className='laptops'>
         {laptops.map((laptop, index) =>
+          // <Link className="link" to="/laptops/:id">
+          <Link className="link" to={`/laptops/${laptop._id}`}>
           <Laptop
             _id={laptop._id}
             name={laptop.name}
@@ -34,12 +37,14 @@ const Laptops = (props) => {
             price={laptop.price}
             key={index}
           />
+            </Link>
 
         )}
         <Link className="link" to="/add-laptop">
           <button>Add Laptop</button>
         </Link>
-      </div>
+        </div>
+        
     </Layout>
   )
 }
