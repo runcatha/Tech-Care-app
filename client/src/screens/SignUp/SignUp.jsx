@@ -46,6 +46,7 @@ const SignUp = (props) => {
     const toggleForm = form.isError ? 'danger' : ''
     if (form.isError) {
       return (
+
         <button type='submit' className={toggleForm}>
           {form.errorMsg}
         </button>
@@ -54,10 +55,10 @@ const SignUp = (props) => {
       return <button type='submit' className='sign-up-button'>Sign Up</button>
     }
   }
-
   const { username, email, password, passwordConfirmation } = form
 
   return (
+
     <>
       <Layout user={props.user}>
         <div className='form-container'>
@@ -121,6 +122,7 @@ const SignUp = (props) => {
         </div>
       </Layout>
     </>
+
   )
 }
 

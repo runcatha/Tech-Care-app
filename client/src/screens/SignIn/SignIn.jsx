@@ -3,6 +3,7 @@ import './SignIn.css'
 import { signIn } from '../../services/users'
 import { useHistory } from 'react-router-dom'
 import { Layout } from '../../components'
+import { NavLink, Link } from 'react-router-dom'
 
 const SignIn = (props) => {
   const history = useHistory()
@@ -82,6 +83,7 @@ const SignIn = (props) => {
               id='signin-image' />
             <input
               required
+              id='signin-username-id'
               type='text'
               name='username'
               value={username}
@@ -90,12 +92,9 @@ const SignIn = (props) => {
               className='signin-input'
             />
           </div>
-          <div className='signin-user'>
-            <img src='https://i.imgur.com/IFrULuW.png'
-              alt='password'
-              id='signin-image' />
             <input
               required
+              id='signin-password-id'
               name='password'
               value={password}
               type='password'
@@ -104,8 +103,15 @@ const SignIn = (props) => {
               className='signin-input'
             />
           </div>
-          {renderError()}
         </form>
+        <div className='signin-button-redirect-link'>
+          <Link to='/sign-up' id='signin-to-signup-link' >
+            <p className='signin-to-signup'>Not a user? Sign up here!</p>
+          </Link>
+          <div className='signin-button-container'>
+            {renderError()}
+          </div>
+        </div>
       </div>
     </Layout>
   )

@@ -13,10 +13,32 @@
     align-content: space-around;
     margin: 15px;
     width: 18rem;
+    border-radius: 10px;
+    
     
 }
 
 .laptops-div img {
   width:  100%;
   /* width: 18rem; */
+}
+
+.add-button{
+  background-color: #b3d7ec;
+  border-radius: 5px;
+  color: #514538;
+  border: solid 1px #514538;
+}
+
+.laptops {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.div.card-container.card {
+  height: 100px;
 }

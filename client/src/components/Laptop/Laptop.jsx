@@ -20,9 +20,9 @@ function Laptop(props) {
           
       <div className='laptops-div' >
         {/* style={{ width: '18rem' }} */}
-        <Card className='card-container' >
-          <Card.Img className='card-img' variant="top" src={props.image_url} />
-          <Card.Body>
+        <Card className='card-container' style={{ height: '17rem' }} >
+          <Card.Img className='card-img' variant="top" src={props.image_url} style={{ height: '10rem' }}/>
+          <Card.Body style={{ height: '15rem' }}>
             <Card.Title className='card-name'>{props.name}</Card.Title>
             <Card.Text className='card-price'>
               ${props.price}

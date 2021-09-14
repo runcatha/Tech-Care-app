@@ -1,44 +1,67 @@
 .signin-content-container{
- background-image: url('https://i.imgur.com/WAlnyru.png');
- background-size: cover;
- height: 100%;
-}
 
-.h2-log-in{
-text-align: left;
-margin-left: 5%;
-margin-bottom: 11%;
-}
-
-#signin-image{
-  height: 60px;
-  width: 60px;
-}
-
-.signin-user{
+  grid-area: C;
   display: flex;
-  flex-direction: row;
-  margin-left: 29%;
-  margin-bottom: 3%;
+  flex-direction: column;
+  height: 75vh;
 }
-
-.signin-input{
-  border: none;
-  background-color: #eeeeeeb5;
-  height: 50px;
-  font-size: 20px;
-  padding-left: 14px;
-  width: 50%;
-  margin-top: 4px;
+.signin-form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
-
-.sign-in-button{
-  border: none;
-  width: 20%;
-  height: 35px;
-  font-size: 20px;
-  margin-bottom: 10%;
+.signin-email{
+  background-color: #EEEEEE
+}
+#signin-email-logo{
+  height: 5vh;
+}
+#signin-email-id{
+  border-style: none;
+  background-color: #EEEEEE;
+}
+.signin-username{
+  background-color: #EEEEEE;
   margin-top: 2%;
-  background-color: #eeeeeebd;
-  }
+  margin-bottom: 2%;
+}
+#signin-username-logo{
+  height: 5vh;
+}
+#signin-username-id{
+  border-style: none;
+  background-color: #EEEEEE;
+}
+.signin-password{
+  background-color: #EEEEEE
+}
+#signin-password-logo{
+  height: 5vh;
+}
+#signin-password-id{
+  border-style: none;
+  background-color: #EEEEEE;
+}
+#signin-submit-button{
+  color: black;
+  background-color: #B3D7EC;
+  border-style: none;
+  height: 7vh;
+  width: 20vw;
+}
+.signin-button-redirect-link{
+  width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5%;
+}
+#signin-to-signup-link{
+  text-decoration: none;
+    color: black;
+    font: Roboto;
+}
 
