@@ -1,11 +1,32 @@
 .signin-content-container{
   grid-area: C;
-  /* height: 100%; */
   display: flex;
   flex-direction: column;
 }
-#signin-form{
+.signin-form{
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.signin-email{
+
+}
+#signin-email-logo{
+  height: 5vh;
+}
+#signin-email-id{
+
+}
+.signin-username{
+
+}
+.signin-password{
+
+}
+#signin-password-logo{
+  height: 5vh;
+}
+#signin-submit-button{
+
 }
