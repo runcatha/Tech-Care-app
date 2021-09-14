@@ -1,5 +1,8 @@
 import './Nav.css'
 import { NavLink, Link } from 'react-router-dom'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const authenticatedOptions = (
   <>
