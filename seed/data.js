@@ -37,7 +37,7 @@ const insertData = async () => {
   const laptops =
     [
       {
-        image_url: "https://i.imgur.com/yl97Avwb.jpg",
+        image_url: "https://i.imgur.com/RTEHReW.jpg",
         name: 'Dell XPS 15 (2020)',
         price: '1,059.99',
         description: `The Dell XPS 15 (2020) is in our view the best laptop for programming right now. As with previous XPS laptops, this 15-inch beauty combines a stunning design, excellent build quality and some of the most powerful mobile components you'll find in a laptop.
