@@ -102,7 +102,7 @@ const SignIn = (props) => {
               onChange={handleChange}
               className='signin-input'
             />
-          </div>
+          {/* </div> */}
         </form>
         <div className='signin-button-redirect-link'>
           <Link to='/sign-up' id='signin-to-signup-link' >
