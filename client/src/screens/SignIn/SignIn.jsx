@@ -54,7 +54,6 @@ const SignIn = (props) => {
       return <button
         id='signin-submit-button'
         type='submit'
-        className='sign-in-button'
       >Sign In</button>
     }
   }
