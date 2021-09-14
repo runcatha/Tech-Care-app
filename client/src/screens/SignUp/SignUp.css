@@ -1,12 +1,19 @@
-.form-sign-up{  
+.form-sign-up{
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+
+.sign-up-background{  
   background-image: url('https://i.imgur.com/daYwXnF.png');
+  background-position: center;
   background-size: cover;
+  padding-bottom: 15%;
 }
 
 .h2-sign-up{
   text-align: left;
   margin-left: 5%;
-  margin-bottom: 8%;
+  margin-bottom: 10%;
   margin-top: 1%;
   padding-top: 1%;
   font-family: 'Roboto', sans-serif;
@@ -15,8 +22,9 @@
 .sign-up-div{
   display: flex;
   flex-direction: row;
-  margin-left: 25%;
+  justify-content: center;
   margin-bottom: 3%;
+  position: static;
 }
 
 .sign-up-image{
@@ -34,31 +42,21 @@
   margin-left: 2%;
 }
 
+
 .sign-up-button{
   border: none;
-  width: 20%;
-  height: 35px;
-  font-size: 20px;
-  margin-bottom: 10%;
-  margin-top: 2%;
-  background-color: #eeeeeebd;
-}
-
-.sign-up-welcome {
-  display: flex;
-  justify-content: right;
-  background-color: #fafafa;
-  padding-top: 1%;
-  padding-bottom: 2%;
-  
-}
-
-.h1-sign-up{
   background-color: #B3D7EC;
+  margin-top: 2%;
   text-align: right;
-  margin-right: 12%;
   padding: 1% 4% 1% 4%;
   font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  margin-left: 30%;
+  transition: .5s ease-out;
+}
+
+.sign-up-button:hover{
+  background-position: left;
 }
 
 
