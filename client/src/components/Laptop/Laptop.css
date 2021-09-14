@@ -1,6 +1,7 @@
 .card-name {
   color: #514538;
   letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .card-price {
