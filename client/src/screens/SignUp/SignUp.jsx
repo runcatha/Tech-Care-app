@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './SignUp.css'
 import { signUp } from '../../services/users'
 import { useHistory } from 'react-router-dom'
+import { Layout } from '../../components'
 
 const SignUp = (props) => {
   const history = useHistory()
@@ -45,6 +46,7 @@ const SignUp = (props) => {
     const toggleForm = form.isError ? 'danger' : ''
     if (form.isError) {
       return (
+
         <button type='submit' className={toggleForm}>
           {form.errorMsg}
         </button>
@@ -53,52 +55,58 @@ const SignUp = (props) => {
       return <button type='submit'>Sign Up</button>
     }
   }
-
   const { username, email, password, passwordConfirmation } = form
 
   return (
-    <div className='form-container'>
-      <h3>Sign Up</h3>
-      <form onSubmit={onSignUp}>
-        <label>Username</label>
-        <input
-          required
-          type='text'
-          name='username'
-          value={username}
-          placeholder='Enter username'
-          onChange={handleChange}
-        />
-        <label>Email address</label>
-        <input
-          required
-          type='email'
-          name='email'
-          value={email}
-          placeholder='Enter email'
-          onChange={handleChange}
-        />
-        <label>Password</label>
-        <input
-          required
-          name='password'
-          value={password}
-          type='password'
-          placeholder='Password'
-          onChange={handleChange}
-        />
-        <label>Password Confirmation</label>
-        <input
-          required
-          name='passwordConfirmation'
-          value={passwordConfirmation}
-          type='password'
-          placeholder='Confirm Password'
-          onChange={handleChange}
-        />
-        {renderError()}
-      </form>
-    </div>
+    <Layout user={props.user}>
+      <div className='form-container'>
+        <h3>Sign Up</h3>
+        <form onSubmit={onSignUp}>
+          <label>Username</label>
+          <input
+            required
+            type='text'
+            name='username'
+            value={username}
+            placeholder='Enter username'
+            onChange={handleChange}
+          />
+          <label>Email address</label>
+          <input
+            required
+            type='email'
+            name='email'
+            value={email}
+            placeholder='Enter email'
+            onChange={handleChange}
+          />
+          <label>Password</label>
+          <input
+            required
+            name='password'
+            value={password}
+            type='password'
+            placeholder='Password'
+            onChange={handleChange}
+          />
+          <label>Password Confirmation</label>
+          <input
+            required
+            name='passwordConfirmation'
+            value={passwordConfirmation}
+            type='password'
+            placeholder='Confirm Password'
+            onChange={handleChange}
+          />
+        </form>
+      </div>
+      <div className='signin-button-redirect-link'>
+        <p>New User? Sign up here!</p>
+        <div className='signin-button-container'>
+          {renderError()}
+        </div>
+      </div>
+    </Layout>
   )
 }
 
