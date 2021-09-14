@@ -2,31 +2,64 @@
   grid-area: C;
   display: flex;
   flex-direction: column;
+  height: 75vh;
 }
 .signin-form{
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  
 }
 .signin-email{
-
+  background-color: #EEEEEE
 }
 #signin-email-logo{
   height: 5vh;
 }
 #signin-email-id{
-
+  border-style: none;
+  background-color: #EEEEEE;
 }
 .signin-username{
-
+  background-color: #EEEEEE;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#signin-username-logo{
+  height: 5vh;
+}
+#signin-username-id{
+  border-style: none;
+  background-color: #EEEEEE;
 }
 .signin-password{
-
+  background-color: #EEEEEE
 }
 #signin-password-logo{
   height: 5vh;
 }
+#signin-password-id{
+  border-style: none;
+  background-color: #EEEEEE;
+}
 #signin-submit-button{
-
+  color: black;
+  background-color: #B3D7EC;
+  border-style: none;
+  height: 7vh;
+  width: 20vw;
+}
+.signin-button-redirect-link{
+  width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5%;
+}
+#signin-to-signup-link{
+  text-decoration: none;
+    color: black;
+    font: Roboto;
 }
