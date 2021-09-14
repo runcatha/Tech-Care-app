@@ -65,10 +65,11 @@ const SignUp = (props) => {
     <>
       <Layout user={props.user}>
         <div className='form-container'>
-          <h2 className='h2-sign-up'>Sign Up</h2>
+
           <form onSubmit={onSignUp} className='form-sign-up'>
+            <h2 className='h2-sign-up'>Sign Up</h2>
             <div className="sign-up-div">
-              {/* <label>Username</label> */}
+
               <img src='https://i.imgur.com/WbAsAQV.png' alt='user' className='sign-up-image' />
               <input
                 required
@@ -82,7 +83,7 @@ const SignUp = (props) => {
             </div>
 
             <div className="sign-up-div">
-              {/* <label>Email address</label> */}
+
               <img src='https://i.imgur.com/iKGsf9v.png' alt='email' className='sign-up-image' />
               <input
                 required
@@ -94,7 +95,7 @@ const SignUp = (props) => {
                 className='sign-up-input'
               />
             </div>
-            {/* <label>Password</label> */}
+
             <div className="sign-up-div">
               <img src='https://i.imgur.com/IFrULuW.png' alt='password' className='sign-up-image' />
               <input
@@ -108,7 +109,7 @@ const SignUp = (props) => {
               />
             </div>
             <div className="sign-up-div">
-              {/* <label>Password Confirmation</label> */}
+
               <img src='https://i.imgur.com/IFrULuW.png' alt='password' className='sign-up-image' />
               <input
                 required
@@ -122,6 +123,9 @@ const SignUp = (props) => {
             </div>
             {renderError()}
           </form>
+          <div className='sign-up-welcome'>
+            <h1 className='h1-sign-up'>Welcome!</h1>
+          </div>
         </div>
       </Layout>
     </>
