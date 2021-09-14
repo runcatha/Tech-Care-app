@@ -52,61 +52,77 @@ const SignUp = (props) => {
         </button>
       )
     } else {
-      return <button type='submit'>Sign Up</button>
+      return <button type='submit' className='sign-up-button'>Sign Up</button>
     }
   }
   const { username, email, password, passwordConfirmation } = form
 
   return (
-    <Layout user={props.user}>
-      <div className='form-container'>
-        <h3>Sign Up</h3>
-        <form onSubmit={onSignUp}>
-          <label>Username</label>
-          <input
-            required
-            type='text'
-            name='username'
-            value={username}
-            placeholder='Enter username'
-            onChange={handleChange}
-          />
-          <label>Email address</label>
-          <input
-            required
-            type='email'
-            name='email'
-            value={email}
-            placeholder='Enter email'
-            onChange={handleChange}
-          />
-          <label>Password</label>
-          <input
-            required
-            name='password'
-            value={password}
-            type='password'
-            placeholder='Password'
-            onChange={handleChange}
-          />
-          <label>Password Confirmation</label>
-          <input
-            required
-            name='passwordConfirmation'
-            value={passwordConfirmation}
-            type='password'
-            placeholder='Confirm Password'
-            onChange={handleChange}
-          />
-        </form>
-      </div>
-      <div className='signin-button-redirect-link'>
-        <p>New User? Sign up here!</p>
-        <div className='signin-button-container'>
-          {renderError()}
+
+    <>
+      <Layout user={props.user}>
+        <div className='form-container'>
+          <h2 className='h2-sign-up'>Sign Up</h2>
+          <form onSubmit={onSignUp} className='form-sign-up'>
+            <div className="sign-up-div">
+              {/* <label>Username</label> */}
+              <img src='https://i.imgur.com/WbAsAQV.png' alt='user' className='sign-up-image' />
+              <input
+                required
+                type='text'
+                name='username'
+                value={username}
+                placeholder='Enter username'
+                onChange={handleChange}
+                className='sign-up-input'
+              />
+            </div>
+
+            <div className="sign-up-div">
+              {/* <label>Email address</label> */}
+              <img src='https://i.imgur.com/iKGsf9v.png' alt='email' className='sign-up-image' />
+              <input
+                required
+                type='email'
+                name='email'
+                value={email}
+                placeholder='Enter email'
+                onChange={handleChange}
+                className='sign-up-input'
+              />
+            </div>
+            {/* <label>Password</label> */}
+            <div className="sign-up-div">
+              <img src='https://i.imgur.com/IFrULuW.png' alt='password' className='sign-up-image' />
+              <input
+                required
+                name='password'
+                value={password}
+                type='password'
+                placeholder='Password'
+                onChange={handleChange}
+                className='sign-up-input'
+              />
+            </div>
+            <div className="sign-up-div">
+              {/* <label>Password Confirmation</label> */}
+              <img src='https://i.imgur.com/IFrULuW.png' alt='password' className='sign-up-image' />
+              <input
+                required
+                name='passwordConfirmation'
+                value={passwordConfirmation}
+                type='password'
+                placeholder='Confirm Password'
+                onChange={handleChange}
+                className='sign-up-input'
+              />
+            </div>
+            {renderError()}
+          </form>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
+
   )
 }
 
