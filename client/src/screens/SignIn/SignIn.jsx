@@ -121,7 +121,7 @@ const SignIn = (props) => {
             <Link to='/sign-up' id='signin-to-signup-link' >
               <p className='signin-to-signup'>Not a user?Sign up here!</p>
             </Link>
-            <div>
+            <div className='signin-button'>
               {renderError()}
             </div>
           </div>
