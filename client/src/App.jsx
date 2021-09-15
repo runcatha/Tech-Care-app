@@ -10,10 +10,11 @@ import SignOut from './screens/SignOut/SignOut'
 import SignUp from './screens/SignUp/SignUp'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { verifyUser } from './services/users'
+import {useHistory} from 'react-router-dom'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
-
+  const history = useHistory()
   const [user, setUser] = useState(null)
   useEffect(() => {
     const fetchUser = async () => {
@@ -22,7 +23,10 @@ const App = () => {
     }
     fetchUser()
   }, [])
-
+  const handleRedirect = () => {
+    history.push('/sign-in')
+    alert('Please sign in first')
+}
   return (
     <div className="App">
       <div className='.mega-grid'>
@@ -37,10 +41,10 @@ const App = () => {
             <LaptopDetail user={user} />
           </Route>
           <Route path='/add-laptop' >
-            {user ? < LaptopCreate user={user} /> : <Redirect to='/sign-up' />}
+            {user ? < LaptopCreate user={user} /> : handleRedirect}
           </Route>
           <Route path='/laptops/:id/edit'>
-            {user ? <LaptopEdit user={user} /> : <Redirect to='/sign-up' />}
+            {user ? <LaptopEdit user={user} /> : handleRedirect}
           </Route>
           <Route path='/sign-in'>
             <SignIn setUser={setUser} />
