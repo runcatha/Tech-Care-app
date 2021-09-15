@@ -16,3 +16,41 @@
 .card-price {
   font-size: 14px;
 }
+
+@media only screen and (max-width: 426px) {
+  .card-name {
+    font-size: 13px;
+  }
+  .card-price {
+    font-size: 11px;
+    padding-bottom: 5px;
+  }
+  .card-title {
+    padding-top: 5px;
+
+  }
+  .card-container {
+    padding-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .card-name {
+    font-size: 11px;
+  }
+  .card-price {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .card-title {
+    padding-top: 5px;
+
+  }
+  .card-container {
+    padding-bottom: 5px;
+  }
+  .card-body {
+    padding-bottom: 5px;
+  }
+  
+}

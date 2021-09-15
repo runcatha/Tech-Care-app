@@ -12,3 +12,10 @@
   border-radius: 5px;
   border-color: #fafafa;
 }
+
+
+@media only screen and (max-width: 426px) {
+  .search-input {
+    width: 75%;
+  }
+}
