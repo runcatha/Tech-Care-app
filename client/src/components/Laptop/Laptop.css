@@ -17,6 +17,11 @@
   font-size: 14px;
 }
 
+.laptops-div:hover {
+  transform: scale(0.9);
+  transition-duration: 0.5s;
+}
+
 @media only screen and (max-width: 426px) {
   .card-name {
     font-size: 13px;
@@ -51,6 +56,9 @@
   }
   .card-body {
     padding-bottom: 5px;
+  }
+  .card-img {
+    height: 4rem;
   }
   
 }
