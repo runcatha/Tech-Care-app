@@ -1,13 +1,29 @@
 import { useState, useEffect } from "react";
 import "./LaptopDetail.css";
-import { Layout } from "../../components";
-import { getLaptop, deleteLaptop } from "../../services/laptops";
+import { Layout, ReviewForm, Reviews } from "../../components";
+import { getLaptop, deleteLaptop, updateLaptop } from "../../services/laptops";
 import { useParams, Link } from "react-router-dom";
+import StarRating from 'star-rating-react'
 
 const LaptopDetail = (props) => {
-  const [laptop, setLaptop] = useState(null);
-  const [isLoaded, setLoaded] = useState(false);
-  const { id } = useParams();
+  // const [laptop, setLaptop] = useState(null);
+  // const [isLoaded, setLoaded] = useState(false);
+  // const { id } = useParams();
+
+  const [laptop, setLaptop] = useState({
+    name: '',
+    description: '',
+    image_url: '',
+    price: '',
+    reviews: [],
+  })
+  const [review, setReview] = useState({
+    author: '',
+    rating: '',
+    description: '',
+  })
+  const [isLoaded, setLoaded] = useState(false)
+  const { id } = useParams()
 
   useEffect(() => {
     const fetchLaptop = async () => {
@@ -17,6 +33,21 @@ const LaptopDetail = (props) => {
     };
     fetchLaptop();
   }, [id]);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setReview({
+      ...review,
+      [name]: value,
+    })
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    laptop.reviews.push(review)
+    setLaptop(laptop)
+    await updateLaptop(id, laptop)
+  }
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -42,6 +73,18 @@ const LaptopDetail = (props) => {
             src={laptop.image_url}
             alt={laptop.name}
           />
+          <div className='detail'>
+          <div className='name'>{laptop.name}</div>
+          <div className='seller'>by {laptop.userId.username}</div>
+          <div className='rating'>
+            <StarRating
+              size={laptop.rating}
+              value={laptop.rating}
+              onChange={function (val) {
+                console.log(val)
+              }}
+            />
+          </div>
           <h2 className="price">Price: {`$${laptop.price}`}</h2>
           <div className="button-container">
             <Link className="edit-button" to={`/laptops/${laptop._id}/edit`}>
@@ -53,9 +96,20 @@ const LaptopDetail = (props) => {
             >
               Delete
             </button>
-          </div>
+            </div>
+            </div>
         </div>
         <div></div>
+      </div>
+      <div className='reviews-wrapper'>
+        <ReviewForm
+          author={review.author}
+          rating={review.rating}
+          description={review.description}
+          onSubmit={handleSubmit}
+          onChange={handleChange}
+        />
+        <Reviews reviews={laptop.reviews} />
       </div>
     </Layout>
   );
