@@ -1,5 +1,5 @@
 import { Layout } from '../../components'
-import { Redirect, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Home.css'
 
 const Home = (props) => {
@@ -18,7 +18,7 @@ const Home = (props) => {
               <h1 className='home-title'>Tech Care</h1>
               <div className='home-logos-desc'>
                 <div className='home-vs'>
-                  <img src='https://pbs.twimg.com/profile_images/1410632439370641409/Pt-7RucE.jpg'
+                  <img src='https://i.imgur.com/28ysAIp.png'
                     id='vs-code'
                     alt='vs-code'
                     className='vs-image' />
@@ -32,7 +32,7 @@ const Home = (props) => {
                   <p className='home-paragraph'>8 GB of RAM or more</p>
                 </div>
                 <div className='home-cpu'>
-                  <img src="https://i.imgur.com/m7TNOAB.jpg"
+                  <img src="https://i.imgur.com/yraRcoY.png"
                     id='cpu'
                     alt='cpu'
                     className='cpu-image' />

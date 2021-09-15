@@ -71,3 +71,24 @@ grid-template-columns: 1fr 1fr 1fr;
 #browse-link{
   text-decoration: none;
 }
+
+@media screen and (max-width: 375px) {
+  .home-pg-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .home-logos-desc{
+    display: flex;
+    flex-direction: column;
+  }
+  .home-mission-statement{
+    text-align: center;
+    font-size: 25px;
+  }
+  .home-paragraph{
+    font-size: 20px;
+  }
+  .home-browse-link{
+    font-size: 26px;
+  }
+}
