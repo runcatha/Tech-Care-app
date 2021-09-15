@@ -1,44 +1,66 @@
 import './Nav.css'
 import { NavLink, Link } from 'react-router-dom'
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css"
 
-const authenticatedOptions = (
-  <>
-    {/* <Link className="link" to="/add-laptop">Add Laptop</Link> */}
-    {/* <Link className="link" to="/laptops/:id/edit">Edit Laptop</Link> */}
-    <NavLink className="link" to="/sign-out">Sign Out</NavLink>
-  </>
-)
-const unauthenticatedOptions = (
-  <>
-    <NavLink className="link" to="/sign-up">Sign Up</NavLink>
-    <NavLink className="link" to="/sign-in">Sign In</NavLink>
-  </>
-)
-const alwaysOptions = (
-  <>
-    <NavLink className="link" to="/laptops">Laptops</NavLink>
-    {/* <Link className="link" to="/laptops/:id">Details Page</Link> */}
-  </>
-)
 const Nav = ({ user }) => {
+  const [visible, setVisible] = useState(true)
+  const [ham, setHam] = useState(true)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 500) {
+        setVisible(true)
+        setHam(true)
+      } else if (window.innerWidth < 500 && !visible) {
+        setVisible(false)
+        setHam(false)
+      }
+    }
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+  const authenticatedOptions = (
+    <>
+      <NavLink className="link" to="/sign-out">Sign Out</NavLink>
+    </>
+  )
+  const unauthenticatedOptions = (
+    <>
+      <NavLink className="link" to="/sign-up">Sign Up</NavLink>
+      <NavLink className="link" to="/sign-in">Sign In</NavLink>
+    </>
+  )
+  const alwaysOptions = (
+    <>
+      <NavLink className="link" to="/laptops">Laptops</NavLink>
+    </>
+  )
+
   return (
-    <nav>
+    <header>
       <div className="nav">
         <NavLink className="logo" to="/">
           <img src='https://i.imgur.com/qYcMJPz.png?1'
             alt='home'
             id='home-link' />
         </NavLink>
-        <div className="links">
-          {user && <div className="link welcome">Welcome, {user.username}</div>}
-          {alwaysOptions}
-          {user ? authenticatedOptions : unauthenticatedOptions}
+        <div className='nav-block'>
+          <img src='https://i.imgur.com/ph864XQ.png'
+            alt='🍔'
+            id='ham-icon'
+            onClick={() => setHam(!ham)} />
+          <div className="links"
+            style={{ display: visible && ham ? 'flex' : 'none' }}>
+            {user && <div className="link welcome">Welcome, {user.username}</div>}
+            {alwaysOptions}
+            {user ? authenticatedOptions : unauthenticatedOptions}
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
   )
 }
 export default Nav
