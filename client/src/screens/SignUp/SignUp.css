@@ -60,5 +60,15 @@
   background-position: left;
 }
 
+@media all and (max-width: 375px) {
+  .h2-sign-up{
+    margin-bottom: 1%;
+    padding-bottom: 4%;
+  }
+  .sign-up-input{
+    width: 80%;
+  }
+}
+
 
 
