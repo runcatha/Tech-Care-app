@@ -100,7 +100,7 @@ h2 {
 @media screen and (max-width: 375px) {
   .laptop-detail {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-content: center;
     padding: 10px;
   }
