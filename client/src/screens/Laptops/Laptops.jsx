@@ -9,11 +9,15 @@ import { Link } from 'react-router-dom'
 import { Layout, Laptop } from '../../components'
 import { getLaptops } from '../../services/laptops'
 import Search from '../../components/Search/Search'
+import Sort from '../../components/Sort/Sort'
+import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort'
 
 
 const Laptops = (props) => {
   const [laptops, setLaptops] = useState([])
   const [searchResult, setSearchResult] = useState([])
+  const [applySort, setApplySort] = useState(false)
+  const [sortType, setSortType] = useState('name-ascending')
 
   useEffect(() => {
     const fetchLaptops = async () => {
@@ -25,11 +29,43 @@ const Laptops = (props) => {
     fetchLaptops()
   }, [])
 
+  const handleSort = (type) => {
+    if (type !== '' && type !== undefined) {
+      setSortType(type)
+    }
+    switch (type) {
+      case 'name-ascending':
+        setSearchResult(AZ(searchResult))
+        break
+      case 'name-descending':
+        setSearchResult(ZA(searchResult))
+        break
+      case 'price-ascending':
+        setSearchResult(lowestFirst(searchResult))
+        break
+      case 'price-descending':
+        setSearchResult(highestFirst(searchResult))
+        break
+      default:
+        break
+    }
+  }
+
+  if (applySort) {
+    handleSort(sortType)
+    setApplySort(false)
+  }
+
   const handleSearch = (event) => {
     const results = laptops.filter((laptop) =>
       laptop.name.toLowerCase().includes(event.target.value.toLowerCase())
     )
     setSearchResult(results)
+
+
+
+    setApplySort(true)
+    
 
   }
 
@@ -39,6 +75,11 @@ const Laptops = (props) => {
   return (
     <Layout user={props.user}>
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
+
+
+
+      <Sort onSubmit={handleSubmit} handleSort={handleSort} />
+      
 
       <div className='laptops'>
         {searchResult.map((laptop, index) =>
