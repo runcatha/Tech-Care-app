@@ -12,7 +12,7 @@
     align-self: auto;
     align-content: space-around;
     margin: 15px;
-    width: 15rem;
+    width: 14rem;
     border-radius: 5px;
     
     
@@ -29,6 +29,7 @@
   color: #514538;
   border: solid 1px #514538;
 }
+
 
 .laptops {
   display: flex;
@@ -52,6 +53,11 @@
   letter-spacing: 2px;
 }
 
+.add-button:hover {
+  transform: scale(0.9);
+  transition-duration: 0.5s;
+}
+
 @media only screen and (max-width: 769px) {
   .laptops-div {
     width: 13rem;
@@ -61,14 +67,14 @@
 @media only screen and (max-width: 426px) {
   .laptops-div {
     width: 11rem;
-    height: 13rem;
+    height: 12rem;
   }
 }
 
 
 @media only screen and (max-width: 376px) {
   .laptops-div {
-    width: 9rem;
-    height: 13rem;
+    width: 153px;
+    height: 11rem;
   }
 }
