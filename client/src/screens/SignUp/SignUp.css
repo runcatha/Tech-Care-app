@@ -1,0 +1,64 @@
+.form-sign-up{
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+
+.sign-up-background{  
+  background-image: url('https://i.imgur.com/daYwXnF.png');
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 15%;
+}
+
+.h2-sign-up{
+  text-align: left;
+  margin-left: 5%;
+  margin-bottom: 10%;
+  margin-top: 1%;
+  padding-top: 1%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sign-up-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 3%;
+  position: static;
+}
+
+.sign-up-image{
+  width: 50px;
+  height: 50px;
+}
+
+.sign-up-input{
+  border: none;
+  background-color: #eeeeeeb5;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 25px;
+  width: 50%;
+  margin-left: 2%;
+}
+
+
+.sign-up-button{
+  border: solid 1px black;
+  border-radius: 5px;
+  background-color: #B3D7EC;
+  margin-top: 2%;
+  text-align: right;
+  padding: 1% 4% 1% 4%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  margin-left: 30%;
+  transition: .5s ease-out;
+}
+
+.sign-up-button:hover{
+  background-position: left;
+}
+
+
+

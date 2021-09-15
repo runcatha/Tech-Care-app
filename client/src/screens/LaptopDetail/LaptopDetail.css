@@ -1,0 +1,135 @@
+.laptop-detail {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.secondhalf {
+  padding: 40px;
+}
+
+.laptop-detail-image {
+  display: grid;
+  align-content: flex-start;
+  align-items: center;
+  width: 100%;
+  /* height: 30%; */
+  padding: 40px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding: 50px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  padding: 10px;
+}
+
+.editbutton {
+  display: flex;
+  background-color: rgba(136, 211, 244, 0.571);
+  padding: 20px 70px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: solid rgba(82, 54, 21, 0.954);
+}
+
+.edit-button {
+  text-decoration: none;
+  color: solid rgba(82, 54, 21, 0.954);
+}
+
+.delete-button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: flex-end; */
+  align-content: flex-end;
+  background-color: rgba(136, 211, 244, 0.571);
+
+  padding: 20px 70px;
+  font-size: 20px;
+  border-radius: 10px;
+  border-color: rgb(75, 40, 15);
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-content: flex-end;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  justify-content: space-between;
+  color: solid rgba(82, 54, 21, 0.954);
+}
+h1 {
+  display: flex;
+  justify-content: center;
+}
+h2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.linkbutton {
+  background-color: rgba(136, 211, 244, 0.571);
+  border-radius: 10px;
+  border-color: rgb(75, 40, 15);
+  padding: 20px 70px;
+  font-size: 20px;
+}
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (max-width: 375px) {
+  .laptop-detail {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 10px;
+  }
+  .secondhalf {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 10px;
+  }
+  .laptop-detail-image {
+    padding: 5px;
+  }
+  .button-container {
+    display: flex;
+
+    width: 100%;
+    justify-content: space-around;
+  }
+  .linkbutton {
+    padding: 12px, 30px;
+  }
+
+  .editbutton {
+    padding: 10px 20px;
+  }
+  .delete-button {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    border-color: solid rgba(82, 54, 21, 0.954);
+  }
+}

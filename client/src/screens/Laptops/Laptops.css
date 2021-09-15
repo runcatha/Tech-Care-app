@@ -1,0 +1,80 @@
+.laptops-div {
+  border: 2px solid #d3d3d3;
+    /* width: 30%; */
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    align-content: space-around;
+    margin: 15px;
+    width: 14rem;
+    border-radius: 5px;
+    
+    
+}
+
+.laptops-div img {
+  width:  100%;
+  /* width: 18rem; */
+}
+
+.add-button{
+  background-color: #b3d7ec;
+  border-radius: 5px;
+  color: #514538;
+  border: solid 1px #514538;
+}
+
+
+.laptops {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.div.card-container.card {
+  height: 100px;
+}
+
+.add-button {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.add-button:hover {
+  transform: scale(0.9);
+  transition-duration: 0.5s;
+}
+
+@media only screen and (max-width: 769px) {
+  .laptops-div {
+    width: 13rem;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .laptops-div {
+    width: 11rem;
+    height: 12rem;
+  }
+}
+
+
+@media only screen and (max-width: 376px) {
+  .laptops-div {
+    width: 153px;
+    height: 11rem;
+  }
+}

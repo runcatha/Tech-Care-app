@@ -1,0 +1,117 @@
+.edit-form-content-container{
+  grid-area: C;
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+}
+.doggo-container{
+  width: 65%;
+}
+#doggo-programmer{
+  width: 100%;
+  height: 80%;
+}
+.doggo-padding{
+
+}
+.edit-form{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  justify-content: space-evenly;
+  padding: 0% 2%;
+}
+.edit-input-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.edit-input-image-link{
+  border-style: none;
+  background-color: #c4c4c4;
+  color: #514538;
+  margin:  0%;
+  padding: 3% ;
+  margin-bottom: 20px;
+  
+}
+.input-name{
+  border-style: none;
+  background-color: #c4c4c4;
+  color: #514538;
+  margin:  0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
+}
+.input-price{
+  border-style: none;
+  background-color: #c4c4c4;
+  color: #514538;
+  margin:  0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
+}
+.input-description{
+  border-style: none;
+  background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
+}
+.input-processor{
+  border-style: none;
+  background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
+}
+.input-memory{
+  border-style: none;
+  background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
+}
+.input-hardrive{
+  border-style: none;
+  background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
+}
+.input-buy-link{
+  border-style: none;
+  background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  /* margin-bottom: 20px; */
+}
+.edit-form-button-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 7%;
+  margin-bottom: 7%;
+}
+.save-button{
+  /* color: black;
+  background-color: #B3D7EC;
+  border-style: none;
+  height: 7vh;
+  width: 20vw; */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  background-color: #b3d7ec;
+  border-radius: 5px;
+  color: #514538;
+  border: solid 1px #514538;
+}
