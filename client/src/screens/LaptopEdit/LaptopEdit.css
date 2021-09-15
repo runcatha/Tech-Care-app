@@ -10,9 +10,11 @@
 #doggo-programmer{
   width: 100%;
   height: 80%;
+  display:block
 }
 .doggo-padding{
-
+display: block;
+border: 2px solid blue
 }
 .edit-form{
   display: flex;
@@ -114,4 +116,23 @@
   border-radius: 5px;
   color: #514538;
   border: solid 1px #514538;
+}
+
+@media all and (max-width: 800px) {
+  #doggo-programmer{
+    width: 50%;
+    height: 80%;
+    display:block
+  }
+  .doggo-padding{
+    display: none;
+    border: 2px solid blue
+    }
+  .edit-form{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    justify-content: space-evenly;
+    padding: 0% 2%;
+    }
 }
