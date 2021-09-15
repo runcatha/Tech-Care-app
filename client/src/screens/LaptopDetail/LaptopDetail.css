@@ -94,10 +94,10 @@ h2 {
   padding: 20px 70px;
   font-size: 20px;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1024px) {
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 375px) {
   .laptop-detail {
     display: flex;
     flex-direction: column;
@@ -130,7 +130,6 @@ h2 {
     padding: 10px;
     display: flex;
     justify-content: center;
-
     border-color: solid rgba(82, 54, 21, 0.954);
   }
 }
