@@ -40,7 +40,7 @@ export default class Sidebar extends React.Component {
   authenticatedOptions = (
     <>
       <NavLink onClick={() => this.closeMenu()} className="link menu-item" to="/add-laptop">
-        Add Product
+        Add Laptop
       </NavLink>
       <NavLink onClick={() => this.closeMenu()} className="link menu-item" to="/sign-out">
         Sign Out
@@ -61,9 +61,6 @@ export default class Sidebar extends React.Component {
 
   alwaysOptions = (
     <>
-      <NavLink onClick={() => this.closeMenu()} className="logo menu-item" to="/">
-        Home
-      </NavLink>
       <NavLink onClick={() => this.closeMenu()} className="link menu-item" to="/laptops">
         Laptops
       </NavLink>

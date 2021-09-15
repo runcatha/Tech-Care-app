@@ -23,7 +23,7 @@ const Nav = ({ user }) => {
   )
 
   return (
-    <header>
+    <nav>
       <div className="nav">
         <NavLink className="logo" to="/">
           <img src='https://i.imgur.com/qYcMJPz.png?1'
@@ -39,7 +39,7 @@ const Nav = ({ user }) => {
         </div>
       </div>
       <Sidebar user={user} pageWrapId={"page-wrap"} outerContainerId={"App"} />
-    </header >
+    </nav >
   )
 }
 export default Nav
