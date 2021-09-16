@@ -4,7 +4,7 @@
 
 Wireframe containing schema for project.
 
-https://i.imgur.com/qiXCWRd.png
+![image](https://user-images.githubusercontent.com/87097080/133626189-dd70ce4d-2488-4556-b082-a3d73a315b18.png)
 
 https://www.figma.com/file/qZsPfuKeihI57g4hbDeY0n/TechCare?node-id=20%3A72
 
