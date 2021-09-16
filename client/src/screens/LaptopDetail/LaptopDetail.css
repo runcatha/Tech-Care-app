@@ -79,7 +79,7 @@ h1 {
 h2 {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  padding: 40px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .linkbutton {
@@ -98,47 +98,10 @@ h2 {
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 769px) {
-  .laptop-detail {
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-    padding: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+@media screen and (min-width: 1024px) {
+}
 
-  .secondhalf {
-    padding: 40px;
-  }
-
-  .editbutton {
-    display: flex;
-    background-color: rgba(136, 211, 244, 0.571);
-    padding: 20px 70px;
-    font-size: 20px;
-    border-style: none;
-    margin-right: 50px;
-  }
-
-  .edit-button {
-    text-decoration: none;
-  }
-
-  .delete-button {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* justify-content: flex-end; */
-    align-content: flex-end;
-    background-color: rgba(136, 211, 244, 0.571);
-    padding: 20px 70px;
-    font-size: 20px;
-    border-style: none;
-  }
-
-
-
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 375px) {
   .laptop-detail {
     display: flex;
     flex-direction: column-reverse;
@@ -156,58 +119,20 @@ h2 {
   }
   .button-container {
     display: flex;
+
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .linkbutton {
     padding: 12px, 30px;
   }
 
   .editbutton {
-    margin-right: 20px;
+    padding: 10px 20px;
   }
   .delete-button {
     padding: 10px;
     display: flex;
     justify-content: center;
   }
-}
-
-@media screen and (max-width: 426px) {
-  .laptop-children {
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-    align-content: center;
-  }
-  .secondhalf {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    padding: 10px;
-  }
-  .button-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-  }
-  .editbutton {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  .delete-button {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .linkbutton {
-    display: flex;
-  }
-}
-
-@media screen and {
 }
