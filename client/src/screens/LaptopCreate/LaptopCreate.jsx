@@ -115,6 +115,7 @@ const LaptopCreate = (props) => {
               required
               autoFocus
               onChange={handleChange}
+              type="url"
             />
           </div>
           <div className='create-form-button-div'>
