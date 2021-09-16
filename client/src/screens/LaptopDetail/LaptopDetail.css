@@ -40,13 +40,11 @@
   background-color: rgba(136, 211, 244, 0.571);
   padding: 20px 70px;
   font-size: 20px;
-  border-radius: 10px;
-  color: solid rgba(82, 54, 21, 0.954);
+  border-style: none;
 }
 
 .edit-button {
   text-decoration: none;
-  color: solid rgba(82, 54, 21, 0.954);
 }
 
 .delete-button {
@@ -56,11 +54,9 @@
   /* justify-content: flex-end; */
   align-content: flex-end;
   background-color: rgba(136, 211, 244, 0.571);
-
   padding: 20px 70px;
   font-size: 20px;
-  border-radius: 10px;
-  border-color: rgb(75, 40, 15);
+  border-style: none;
 }
 
 .price {
@@ -75,7 +71,6 @@
   flex-direction: row;
   align-content: flex-end;
   justify-content: space-between;
-  color: solid rgba(82, 54, 21, 0.954);
 }
 h1 {
   display: flex;
@@ -89,10 +84,9 @@ h2 {
 }
 .linkbutton {
   background-color: rgba(136, 211, 244, 0.571);
-  border-radius: 10px;
-  border-color: rgb(75, 40, 15);
   padding: 20px 70px;
   font-size: 20px;
+  border-style: none;
 }
 @media screen and (min-width: 1024px) {
 }
@@ -130,6 +124,5 @@ h2 {
     padding: 10px;
     display: flex;
     justify-content: center;
-    border-color: solid rgba(82, 54, 21, 0.954);
   }
 }
