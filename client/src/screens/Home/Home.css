@@ -51,7 +51,7 @@ grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
   border-radius: 5px;
   color: #514538;
-  border: solid 1px #514538;
+
   color: #514538;
   background-color: #B3D7EC;
   padding-top: 10px;
@@ -90,5 +90,20 @@ grid-template-columns: 1fr 1fr 1fr;
   }
   .home-browse-link{
     font-size: 26px;
+  }
+  .vs-image{
+    width: 20%;
+    margin-bottom: 3%;
+  }
+  
+  .ram-image{
+    margin-top: 10px;
+    width: 20%;
+    margin-bottom: 6%;
+  }
+  
+  .cpu-image{
+    width: 20%;
+    margin-top: 4%;
   }
 }

@@ -61,7 +61,6 @@
 #signin-submit-button{
   color: black;
   background-color: #B3D7EC;
-  border-style: black 1px solid;
   border-radius: 5px;
   height: 9vh;
   width: 20vw;
@@ -107,13 +106,24 @@
   }
 }
 
-@media all and (max-width: 550px){
+@media all and (max-width: 425px){
 .signin-input{
-  width: 40%;
+  width: 25%;
 }
 .h2-log-in{
   margin-bottom: 1%;
   padding-bottom: 6%;
+}
+#signin-email-logo{
+  height: 25px;
+}
+
+#signin-username-logo{
+  height: 25px;
+}
+
+#signin-password-logo{
+  height: 25px;
 }
 }
 
@@ -121,6 +131,9 @@
   .signin-button-redirect-link{
     display: flex;
     flex-direction: column;
+  }
+  .signin-input{
+    width: 48%;
   }
   .h2-log-in{
     margin-bottom: 10%;
