@@ -15,6 +15,7 @@ const LaptopDetail = (props) => {
     description: '',
     image_url: '',
     price: '',
+    buy_link: '',
     reviews: [],
   })
   const [review, setReview] = useState({
@@ -63,9 +64,9 @@ const LaptopDetail = (props) => {
           <h2>Processor: {laptop.processor}</h2>
           <h2>Hard Drive: {laptop.hardrive}</h2>
           <h2>Memory: {laptop.memory}</h2>
-          <Link className="amazonlink" to={laptop.buy_link}>
-            <button className="linkbutton">click to buy</button>
-          </Link>
+          <div className='directLinkbutton'>
+            <a className='linkbutton' href={laptop.buy_link}>Click to Buy</a>
+          </div>
         </div>
         <div className="secondhalf">
           <img
@@ -74,30 +75,30 @@ const LaptopDetail = (props) => {
             alt={laptop.name}
           />
           <div className='detail'>
-          <div className='name'>{laptop.name}</div>
-          <div className='seller'>by {laptop.userId.username}</div>
-          <div className='rating'>
-            <StarRating
-              size={laptop.rating}
-              value={laptop.rating}
-              onChange={function (val) {
-                console.log(val)
-              }}
-            />
+            <div className='name'>{laptop.name}</div>
+            <div className='seller'>by {laptop.userId.username}</div>
+            <div className='rating'>
+              <StarRating
+                size={laptop.rating}
+                value={laptop.rating}
+                onChange={function (val) {
+                  console.log(val)
+                }}
+              />
+            </div>
+            <h2 className="price">Price: {`$${laptop.price}`}</h2>
+            <div className="button-container">
+              <Link className="edit-button" to={`/laptops/${laptop._id}/edit`}>
+                <button className="editbutton">Edit</button>
+              </Link>
+              <button
+                className="delete-button"
+                onClick={() => deleteLaptop(laptop._id)}
+              >
+                Delete
+              </button>
+            </div>
           </div>
-          <h2 className="price">Price: {`$${laptop.price}`}</h2>
-          <div className="button-container">
-            <Link className="edit-button" to={`/laptops/${laptop._id}/edit`}>
-              <button className="editbutton">Edit</button>
-            </Link>
-            <button
-              className="delete-button"
-              onClick={() => deleteLaptop(laptop._id)}
-            >
-              Delete
-            </button>
-            </div>
-            </div>
         </div>
         <div></div>
       </div>
