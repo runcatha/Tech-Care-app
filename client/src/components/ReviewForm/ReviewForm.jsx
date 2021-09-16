@@ -2,7 +2,8 @@ import React from 'react'
 import './ReviewForm.css'
 
 const ReviewForm = ({ author, rating, description, onChange, onSubmit }) => {
-    return (
+  return (
+      <>
         <form className="review-create-form" onSubmit={(e) => onSubmit(e)}>
             <input
                 className="review-input-author"
@@ -30,8 +31,9 @@ const ReviewForm = ({ author, rating, description, onChange, onSubmit }) => {
                 required
                 onChange={(e) => onChange(e)}
             />
+      </form>
             <button type='submit' className="review-submit-button">Submit</button>
-        </form>
+      </>
     )
 }
 
