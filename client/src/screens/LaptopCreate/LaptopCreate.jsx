@@ -40,6 +40,7 @@ const LaptopCreate = (props) => {
       <div className='create-form-content-container'>
         <div className='create-laptop-image-container'>
           <img src='https://i.imgur.com/PenAzS5.jpg'
+            // className='create-laptop-pic'
             id='create-laptop'
             alt='create-laptop' />
           <div className='create-laptop-padding'></div>
@@ -47,7 +48,7 @@ const LaptopCreate = (props) => {
         <form className='create-form' onSubmit={handleSubmit}>
           <div className='create-input-container'>
             <input
-              className='input-image-link'
+              className='add-input-image-link'
               placeholder='Image'
               value={laptop.image_url}
               name='image_url'
@@ -56,7 +57,7 @@ const LaptopCreate = (props) => {
               onChange={handleChange}
             />
             <input
-              className='input-name'
+              className='add-input-name'
               placeholder='Name'
               value={laptop.name}
               name='name'
@@ -65,15 +66,15 @@ const LaptopCreate = (props) => {
               onChange={handleChange}
             />
             <input
-              className='input-price'
+              className='add-input-price'
               placeholder='Price'
               value={laptop.price}
               name='price'
               required
               onChange={handleChange}
             />
-            <textarea
-              className='input-description'
+            <input
+              className='add-input-description'
               placeholder='Description'
               value={laptop.description}
               name='description'
@@ -81,7 +82,7 @@ const LaptopCreate = (props) => {
               onChange={handleChange}
             />
             <input
-              className='input-processor'
+              className='add-input-processor'
               placeholder='Processor'
               value={laptop.processor}
               name='processor'
@@ -89,7 +90,7 @@ const LaptopCreate = (props) => {
               onChange={handleChange}
             />
             <input
-              className='input-memory'
+              className='add-input-memory'
               placeholder='Memory'
               value={laptop.memory}
               name='memory'
@@ -98,7 +99,7 @@ const LaptopCreate = (props) => {
               onChange={handleChange}
             />
             <input
-              className='input-hardrive'
+              className='add-input-hardrive'
               placeholder='Hardrive'
               value={laptop.hardrive}
               name='hardrive'
@@ -107,13 +108,17 @@ const LaptopCreate = (props) => {
               onChange={handleChange}
             />
             <input
-              className='input-buy-link'
+              className='add-input-buy-link'
               placeholder='Buylink'
               value={laptop.buy_link}
-              name='buylink'
+
+
+              name='buy_link'
               required
+
               autoFocus
               onChange={handleChange}
+              type="url"
             />
           </div>
           <div className='create-form-button-div'>

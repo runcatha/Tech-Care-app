@@ -1,0 +1,17 @@
+.laptop-reviews {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  margin: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+  .laptop-reviews {
+    display: flex;
+    align-content: center;
+    padding: 10px;
+  }
+}

@@ -46,3 +46,12 @@
     transform: rotate(360deg);
   }
 }
+button{
+  transition: ease-out .2s;
+  border: none;
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+

@@ -7,8 +7,9 @@ const User = new Schema(
       type: String,
       required: true,
     },
-    email: { type: String, required: true },
+    email: { type: String, required: true, match: /.+\@.+\..+/, unique: true },
     password_digest: { type: String, required: true, select: false },
+    laptops: [{ type: Schema.Types.ObjectId, ref: 'laptops' }]
   },
   { timestamps: true }
 )

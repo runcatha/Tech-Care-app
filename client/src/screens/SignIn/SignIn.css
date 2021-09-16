@@ -10,9 +10,9 @@
    background-position: center;
    background-size: cover;
    display: flex;
-  flex-direction: column;
-  padding-bottom: 20%;
-  margin-top: 2%;
+   flex-direction: column;
+   padding-bottom: 20%;
+   margin-top: 2%;
 }
 
 .h2-log-in{
@@ -28,8 +28,6 @@
   justify-content: center;
   margin-bottom: 3%;
 }
-
-
 
 .signin-input{
   border: none;
@@ -63,13 +61,13 @@
 #signin-submit-button{
   color: black;
   background-color: #B3D7EC;
-  border-style: black 1px solid;
   border-radius: 5px;
   height: 9vh;
   width: 20vw;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
 }
+
 .signin-button-redirect-link{
     display: flex;
     flex-direction: row;
@@ -84,3 +82,82 @@
     font-size: 20px;
 }
 
+@media all and (max-width: 1100px){
+  .h2-log-in{
+   margin-top: 3%;
+   padding-top: 0%;
+ } 
+}
+
+@media all and (max-width: 800px){
+  .signin-user{
+    margin-bottom: 1%;
+  }
+  #signin-email-logo{
+    height: 45px;
+  }
+  
+  #signin-username-logo{
+    height: 45px;
+  }
+  
+  #signin-password-logo{
+    height: 45px;
+  }
+}
+
+@media all and (max-width: 425px){
+.signin-input{
+  width: 25%;
+}
+.h2-log-in{
+  margin-bottom: 1%;
+  padding-bottom: 6%;
+}
+#signin-email-logo{
+  height: 25px;
+}
+
+#signin-username-logo{
+  height: 25px;
+}
+
+#signin-password-logo{
+  height: 25px;
+}
+}
+
+@media all and (max-width: 375px) {
+  .signin-button-redirect-link{
+    display: flex;
+    flex-direction: column;
+  }
+  .signin-input{
+    width: 48%;
+  }
+  .h2-log-in{
+    margin-bottom: 10%;
+  }
+  .signin-user{
+    margin-bottom: 6%;
+  }
+  .signin-button{
+    align-self: flex-end;
+    margin-right: 10%;
+   /* padding-right: 5%; */
+  }
+  #signin-submit-button{
+    width: 100%;
+  }
+  #signin-email-logo{
+    height: 25px;
+  }
+  
+  #signin-username-logo{
+    height: 25px;
+  }
+  
+  #signin-password-logo{
+    height: 25px;
+  }
+}

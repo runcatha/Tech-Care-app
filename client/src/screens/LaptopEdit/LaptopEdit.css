@@ -1,117 +1,307 @@
-.edit-form-content-container{
+.edit-form-content-container {
   grid-area: C;
   display: flex;
   flex-direction: row;
   height: 80vh;
 }
-.doggo-container{
+.doggo-container {
   width: 65%;
 }
-#doggo-programmer{
+#doggo-programmer {
   width: 100%;
-  height: 80%;
+  height: 65%;
+  display: block;
 }
-.doggo-padding{
-
+.doggo-padding {
+  display: block;
+  /* border: 2px solid blue */
 }
-.edit-form{
+.edit-form {
   display: flex;
   flex-direction: column;
   width: 35%;
   justify-content: space-evenly;
   padding: 0% 2%;
 }
-.edit-input-container{
+.edit-input-container {
   display: flex;
   flex-direction: column;
   height: 100%;
+ 
 }
-.edit-input-image-link{
+.edit-input-image-link {
   border-style: none;
   background-color: #c4c4c4;
   color: #514538;
-  margin:  0%;
-  padding: 3% ;
+  margin: 0%;
+  padding: 3%;
   margin-bottom: 20px;
-  
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-.input-name{
+.edit-input-name {
   border-style: none;
   background-color: #c4c4c4;
   color: #514538;
-  margin:  0%;
+  margin: 0%;
   padding: 3% 0%;
   margin-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-.input-price{
+.edit-input-price {
   border-style: none;
   background-color: #c4c4c4;
   color: #514538;
-  margin:  0%;
+  margin: 0%;
   padding: 3% 0%;
   margin-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-.input-description{
+.edit-input-description {
   border-style: none;
   background-color: #c4c4c4;
   color: #514538;
   margin: 2% 0%;
   padding: 3% 0%;
   margin-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-.input-processor{
+.edit-input-processor {
   border-style: none;
   background-color: #c4c4c4;
   color: #514538;
   margin: 2% 0%;
   padding: 3% 0%;
   margin-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-.input-memory{
+.edit-input-memory {
   border-style: none;
   background-color: #c4c4c4;
   color: #514538;
   margin: 2% 0%;
   padding: 3% 0%;
   margin-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-.input-hardrive{
+.edit-input-hardrive {
   border-style: none;
   background-color: #c4c4c4;
   color: #514538;
   margin: 2% 0%;
   padding: 3% 0%;
   margin-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-.input-buy-link{
+.edit-input-buy-link {
   border-style: none;
   background-color: #c4c4c4;
   color: #514538;
   margin: 2% 0%;
   padding: 3% 0%;
+  padding-top: 12px;
+  padding-bottom: 12px;
   /* margin-bottom: 20px; */
 }
-.edit-form-button-div{
+.edit-form-button-div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-right: 7%;
   margin-bottom: 7%;
 }
-.save-button{
-  /* color: black;
-  background-color: #B3D7EC;
-  border-style: none;
-  height: 7vh;
-  width: 20vw; */
+.save-button {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 25px;
   padding-right: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 180px;
   letter-spacing: 2px;
   background-color: #b3d7ec;
-  border-radius: 5px;
+  border: none;
+
   color: #514538;
-  border: solid 1px #514538;
+}
+
+@media screen and (max-width: 769px) {
+  #doggo-programmer {
+    width: 100%;
+    height: 58%;
+    display: block;
+  }
+
+  .save-button {
+    margin-bottom: 163px;
+  }
+
+
+  .edit-input-image-link {
+    margin-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .edit-input-name {
+    margin-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .edit-input-price {
+    margin-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .edit-input-description {
+    margin-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .edit-input-hardrive {
+    margin-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .edit-input-memory {
+    margin-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .edit-input-processor {
+    margin-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .edit-input-buy-link {
+    margin-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #doggo-programmer {
+    width: 100%;
+    height: 51%;
+
+    display: block;
+  }
+
+  .edit-input-image-link {
+    margin-bottom: 5px;
+  }
+
+  .edit-input-name {
+    margin-bottom: 5px;
+  }
+
+  .edit-input-price {
+    margin-bottom: 5px;
+  }
+
+  .edit-input-description {
+    margin-bottom: 5px;
+  }
+
+  .edit-input-hardrive {
+    margin-bottom: 5px;
+  }
+
+  .edit-input-memory {
+    margin-bottom: 5px;
+  }
+
+  .edit-input-processor {
+    margin-bottom: 5px;
+  }
+
+  .edit-input-buy-link {
+    margin-bottom: 5px;
+  }
+
+  .save-button {
+    margin-bottom: 225px;
+    /* margin-left: 10px; */
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
+
+    /* margin-left: 10px; */
+  }
+}
+
+
+
+@media screen and (max-width: 376px) {
+  #doggo-programmer {
+    width: 100%;
+    height: 42%;
+
+    display: block;
+  }
+
+  .edit-input-image-link {
+    margin-bottom: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .edit-input-name {
+    margin-bottom: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .edit-input-price {
+    margin-bottom: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .edit-input-description {
+    margin-bottom: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .edit-input-hardrive {
+    margin-bottom: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .edit-input-memory {
+    margin-bottom: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .edit-input-processor {
+    margin-bottom: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .save-button {
+    margin-bottom: 277px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+  }
 }

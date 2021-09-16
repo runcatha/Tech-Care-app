@@ -65,7 +65,7 @@ const Laptops = (props) => {
 
 
     setApplySort(true)
-    
+
 
   }
 
@@ -79,7 +79,7 @@ const Laptops = (props) => {
 
 
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-      
+
 
       <div className='laptops'>
         {searchResult.map((laptop, index) =>
@@ -93,7 +93,6 @@ const Laptops = (props) => {
               key={index}
             />
           </Link>
-
         )}
       </div>
       <Link className="link" to="/add-laptop">

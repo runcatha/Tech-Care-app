@@ -44,7 +44,6 @@
 
 
 .sign-up-button{
-  border: solid 1px black;
   border-radius: 5px;
   background-color: #B3D7EC;
   margin-top: 2%;
@@ -53,11 +52,20 @@
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   margin-left: 30%;
-  transition: .5s ease-out;
 }
 
-.sign-up-button:hover{
-  background-position: left;
+@media all and (max-width: 375px) {
+  .h2-sign-up{
+    margin-bottom: 1%;
+    padding-bottom: 4%;
+  }
+  .sign-up-input{
+    width: 80%;
+  }
+  .sign-up-div{
+    margin-right: 10%;
+    margin-left: 10%;
+  }
 }
 
 

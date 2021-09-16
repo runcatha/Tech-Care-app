@@ -10,28 +10,32 @@ const insertData = async () => {
   const user1 = new User({
     username: 'cathleen',
     email: 'carunde8@gmail.com',
-    password_digest: await bcrypt.hash('cathleen!', 11)
+    password_digest: await bcrypt.hash('cathleen!', 11),
+    laptops: []
   })
   await user1.save()
 
   const user2 = new User({
     username: 'esther',
     email: 'estherryu77@gmail.com',
-    password_digest: await bcrypt.hash('esther!', 11)
+    password_digest: await bcrypt.hash('esther!', 11),
+    laptops: []
   })
   await user2.save()
 
   const user3 = new User({
     username: 'adanne',
     email: 'audumah94@gmail.com',
-    password_digest: await bcrypt.hash('adanne!', 11)
+    password_digest: await bcrypt.hash('adanne!', 11),
+    laptops: []
   })
   await user3.save()
 
   const user4 = new User({
     username: 'theo',
     email: '456theochang@gmail.com',
-    password_digest: await bcrypt.hash('theo!', 11)
+    password_digest: await bcrypt.hash('theo!', 11),
+    laptops: []
   })
   await user4.save()
   const laptops =
@@ -46,7 +50,13 @@ const insertData = async () => {
         processor: '10th Generation Intel® Core™ i5-',
         memory: '8GB DDR4-2933MHz, 2x4G',
         hardrive: '256GB M.2 PCIe NVMe Solid State Drive',
-        buy_link: 'https://www.dell.com/en-us/shop/dell-laptops/xps-15-laptop/spd/xps-15-9500-laptop/x[…]GjFaucVfgQUr06nphJ_ijZkI47YKDrA8taGlDRZAxdbxtoafQxtlTp3zfL1l_8'
+        buy_link: 'https://www.dell.com/en-us/shop/dell-laptops/xps-15-laptop/spd/xps-15-9500-laptop/x[…]GjFaucVfgQUr06nphJ_ijZkI47YKDrA8taGlDRZAxdbxtoafQxtlTp3zfL1l_8',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: " Amazing. Fabulous. The best laptop ever."
+      }]
       },
       {
         image_url: "https://i.imgur.com/mWUv1nn.jpg",
@@ -56,7 +66,13 @@ const insertData = async () => {
         processor: 'Apple M1 Chip',
         memory: '8 GB Ram - 3733MHz LPDDR4X',
         hardrive: '512 GB memory',
-        buy_link: 'https://www.amazon.com/Apple-MacBook-13-inch-512GB-Storage/dp/B08N5M9XBS/ref=sr_1_1_[…]fYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=='
+        buy_link: 'https://www.amazon.com/Apple-MacBook-13-inch-512GB-Storage/dp/B08N5M9XBS/ref=sr_1_1_[…]fYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+      }]
       },
       {
         image_url: "https://i.imgur.com/EpltLRK.jpg",
@@ -68,7 +84,13 @@ const insertData = async () => {
         processor: 'i7-1165G7 (2.8GHz, Turbo up to 4.7GHz, L3 Cache 12MB)',
         memory: '16GB LPDDR4X 4266MHz, -16GB (On Board)',
         hardrive: 'M.2 2280 SSD (Solid State Drive)',
-        buy_link: 'https://www.amazon.com/dp/B08SW1LTST?tag=georiot-us-default-20&th=1&psc=1&ascsubtag=cbq-us-5763924590665683000-20&geniuslink=true'
+        buy_link: 'https://www.amazon.com/dp/B08SW1LTST?tag=georiot-us-default-20&th=1&psc=1&ascsubtag=cbq-us-5763924590665683000-20&geniuslink=true',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+      }]
       },
       {
         image_url: "https://i.imgur.com/DsBoc9P.jpg",
@@ -84,7 +106,13 @@ const insertData = async () => {
         processor: '10th Gen Intel® Core™ i7-10510U',
         memory: '8GB / 16GB LPDDR3 2133 MHz',
         hardrive: '512GB PCIe SSD',
-        buy_link: 'https://www.amazon.com/Huawei-Matebook-Signature-Edn-Laptop/dp/B07MK3SP9R/ref=sr_1_3?tag=georiot-us-default-20&dchild=1&keywords=Huawei%20MateBook%2013%20Laptop&qid=1600159382&sr=8-3&ascsubtag=cbq-us-7632278232388296000-20&geniuslink=true'
+        buy_link: 'https://www.amazon.com/Huawei-Matebook-Signature-Edn-Laptop/dp/B07MK3SP9R/ref=sr_1_3?tag=georiot-us-default-20&dchild=1&keywords=Huawei%20MateBook%2013%20Laptop&qid=1600159382&sr=8-3&ascsubtag=cbq-us-7632278232388296000-20&geniuslink=true',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+      }]
       },
       {
         image_url: "https://i.imgur.com/snpFfkJ.jpg",
@@ -100,7 +128,13 @@ const insertData = async () => {
         processor: 'M1 Chip',
         memory: '8GB RAM',
         hardrive: '256GB SSD',
-        buy_link: 'https://www.amazon.com/dp/B08N5N6RSS?tag=georiot-us-default-20&th=1&psc=1&ascsubtag=cbq-us-1528383070792320800-20&geniuslink=true'
+        buy_link: 'https://www.amazon.com/dp/B08N5N6RSS?tag=georiot-us-default-20&th=1&psc=1&ascsubtag=cbq-us-1528383070792320800-20&geniuslink=true',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+      }]
       },
       {
         image_url: "https://i.imgur.com/YrEKnqv.jpg",
@@ -116,7 +150,13 @@ const insertData = async () => {
         processor: 'AMD Ryzen 5 Microsoft Surface Edition',
         memory: '8GB RAM',
         hardrive: '256 GB SSD',
-        buy_link: 'https://www.bestbuy.com/site/microsoft-surface-laptop-4-13-5-touch-screen-amd-ryzen-5-surface-edition-8gb-memory-256gb-ssd-latest-model-platinum/6455189.p?acampID=0&cmp=RMX&irclickid=0vBUxRxWjxyITA6SPQQBEz9fUkBQy-zAKRtoxY0&irgwc=1&loc=Narrativ&mpid=376373&ref=198&skuId=6455189'
+        buy_link: 'https://www.bestbuy.com/site/microsoft-surface-laptop-4-13-5-touch-screen-amd-ryzen-5-surface-edition-8gb-memory-256gb-ssd-latest-model-platinum/6455189.p?acampID=0&cmp=RMX&irclickid=0vBUxRxWjxyITA6SPQQBEz9fUkBQy-zAKRtoxY0&irgwc=1&loc=Narrativ&mpid=376373&ref=198&skuId=6455189',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+      }]
       },
       {
         image_url: "https://i.imgur.com/D1UJuPb.jpg",
@@ -130,7 +170,13 @@ const insertData = async () => {
         processor: '8th Gen Intel Quad Core i7-8565U',
         memory: '8GB RAM',
         hardrive: '256GB SSD',
-        buy_link: 'https://www.amazon.com/dp/B07X47L4N4?tag=georiot-us-default-20&th=1&psc=1&ascsubtag=cbq-us-9580421261723308000-20&geniuslink=true'
+        buy_link: 'https://www.amazon.com/dp/B07X47L4N4?tag=georiot-us-default-20&th=1&psc=1&ascsubtag=cbq-us-9580421261723308000-20&geniuslink=true',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+      }]
       },
       {
         image_url: "https://i.imgur.com/bLwdOA5.jpg",
@@ -148,7 +194,13 @@ const insertData = async () => {
         processor: '9th Gen Intel® Core™ i7 with vPro',
         memory: '16 GB DDR4',
         hardrive: '512 GB PCIe SSD',
-        buy_link: 'https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/p1-gen-2/22ws2wpp102'
+        buy_link: 'https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/p1-gen-2/22ws2wpp102',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+      }]
       },
       {
         image_url: "https://i.imgur.com/G7BQ8wd.jpg",
@@ -164,28 +216,23 @@ const insertData = async () => {
         processor: 'Intel® Core™ i5-1135G7',
         memory: '8 GB',
         hardrive: '256 GB',
-        buy_link: 'https://www.hp.com/us-en/shop/ConfigureView?langId=-1&storeId=10151&catEntryId=3074457345619767818&configId=1F5L3AV_100019&source=aw&subacctid=103504&subacctname=Future+Publishing.&adcampaigngroup=91539&awc=7168_1631318906_d2b1a2f183c85862920859a50172fe54&jumpid=af_gen_nc_ns&utm_medium=af&utm_source=aw&utm_campaign=Future+Publishing.'
+        buy_link: 'https://www.hp.com/us-en/shop/ConfigureView?langId=-1&storeId=10151&catEntryId=3074457345619767818&configId=1F5L3AV_100019&source=aw&subacctid=103504&subacctname=Future+Publishing.&adcampaigngroup=91539&awc=7168_1631318906_d2b1a2f183c85862920859a50172fe54&jumpid=af_gen_nc_ns&utm_medium=af&utm_source=aw&utm_campaign=Future+Publishing.',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+      }]
       }
-      // {
-      //   image_url: "",
-      //   name: 'Google Pixelbook Go',
-      //   price: '$649',
-      //   description: `For Android developers, a Chromebook might seem a natural choice for the best possible integration with Google’s software and services, with full support for running Android software natively. However, many Chromebooks are designed to be highly affordable, with lower-spec features and performance suffering to bring the price down.
-
-      //   The Pixelbook Go is an upgrade from more basic models, designed to compete with the bigger laptop manufacturers. It still runs ChromeOS, which supports Google’s Android Studio development tools, but the hardware is right up there with a standard Windows laptop. You can also run Linux apps as well.
-        
-      //   The Pixelbook Go is certainly the best Chromebook ever made. It packs some impressive hardware, including an Intel Core i7 processor, a choice of 8GB or 16GB RAM and a large and vibrant 1,920 x 1,080 screen or 4K touch screen if you really want to show off.
-        
-      //   This all makes it a fantastic laptop for programming on, with performance that matches most Windows 10 laptops, but with an incredibly long-lasting battery that means the Pixelbook Go will keep on going even after many Windows 10 laptops give up the ghost.`,
-      //   processor: 'Intel Core m3',
-      //   memory: '8GB',
-      //   hardrive: '64GB',
-      //   buy_link: 'https://www.bestbuy.com/site/google-pixelbook-go-13-3-touch-screen-chromebook-intel-core-m3-8gb-memory-64gb-solid-state-drive-just-black/6382912.p?acampID=0&cmp=RMX&irclickid=0vBUxRxWjxyITA6SPQQBEz9fUkBQUxwwKRtoxY0&irgwc=1&loc=Narrativ&mpid=376373&ref=198&skuId=6382912'
-      // },
     ]
 
   await Laptop.insertMany(laptops)
   console.log("Created laptops!")
+
+  user3.laptops = await Laptop.find({ userId: user3 })
+  await user3.save()
+  // user4.laptops = await Laptop.find({ userId: user4 })
+  // await user4.save()
 
   // close database connection. done.
   db.close()
