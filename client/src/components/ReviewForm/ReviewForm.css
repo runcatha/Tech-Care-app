@@ -45,13 +45,19 @@
   font-weight: 700;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
   .review-create-form {
     display: flex;
     align-content: center;
+    padding-top: 30px;
   }
   .review-submit-button {
     display: flex;
     justify-content: center;
+  }
+  .review-create-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
   }
 }
