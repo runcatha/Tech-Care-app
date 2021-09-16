@@ -2,14 +2,18 @@ import { useState, useEffect } from "react";
 import "./LaptopDetail.css";
 import { Layout, ReviewForm, Reviews } from "../../components";
 import { getLaptop, deleteLaptop, updateLaptop } from "../../services/laptops";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Redirect } from "react-router-dom";
 import StarRating from 'star-rating-react'
+import { useHistory } from 'react-router-dom'
+import axios from "axios";
 
 const LaptopDetail = (props) => {
   // const [laptop, setLaptop] = useState(null);
-  // const [isLoaded, setLoaded] = useState(false);
-  // const { id } = useParams();
-
+  const [isLoaded, setLoaded] = useState(false);
+  const [isUpdated, setUpdated] = useState(false)
+  const history = useHistory()
+  const { id } = useParams()
+  const [toggleFetch, setToggleFetch] = useState(false)
   const [laptop, setLaptop] = useState({
     name: '',
     description: '',
@@ -23,8 +27,6 @@ const LaptopDetail = (props) => {
     rating: '',
     description: '',
   })
-  const [isLoaded, setLoaded] = useState(false)
-  const { id } = useParams()
 
   useEffect(() => {
     const fetchLaptop = async () => {
@@ -33,7 +35,7 @@ const LaptopDetail = (props) => {
       setLoaded(true);
     };
     fetchLaptop();
-  }, [id]);
+  }, [id, toggleFetch]);
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -48,8 +50,18 @@ const LaptopDetail = (props) => {
     laptop.reviews.push(review)
     setLaptop(laptop)
     await updateLaptop(id, laptop)
+    setToggleFetch((toggleFetch) => !toggleFetch)
+    history.push('/laptops/:id')
   }
 
+  const handleDelete = async (event) => {
+    event.preventDefault()
+    await deleteLaptop(id, laptop)
+    setUpdated(true)
+  }
+  if (isUpdated) {
+    return <Redirect to={'/laptops'} />
+  }
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
@@ -76,7 +88,6 @@ const LaptopDetail = (props) => {
           />
           <div className='detail'>
             <div className='name'>{laptop.name}</div>
-            <div className='seller'>by {laptop.userId.username}</div>
             <div className='rating'>
               <StarRating
                 size={laptop.rating}
@@ -91,6 +102,7 @@ const LaptopDetail = (props) => {
               <Link className="edit-button" to={`/laptops/${laptop._id}/edit`}>
                 <button className="editbutton">Edit</button>
               </Link>
+
               <div>
                 <button
                   className="delete-button"
@@ -99,6 +111,7 @@ const LaptopDetail = (props) => {
                   Delete
                 </button>
               </div>
+
             </div>
           </div>
         </div>
