@@ -40,6 +40,7 @@ const LaptopCreate = (props) => {
       <div className='create-form-content-container'>
         <div className='create-laptop-image-container'>
           <img src='https://i.imgur.com/PenAzS5.jpg'
+            // className='create-laptop-pic'
             id='create-laptop'
             alt='create-laptop' />
           <div className='create-laptop-padding'></div>
@@ -72,7 +73,7 @@ const LaptopCreate = (props) => {
               required
               onChange={handleChange}
             />
-            <textarea
+            <input
               className='input-description'
               placeholder='Description'
               value={laptop.description}

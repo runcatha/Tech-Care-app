@@ -9,11 +9,12 @@
 }
 #create-laptop{
   width: 100%;
-  height: 80%;
+  height: 70%;
+  display: block;
 }
-.create-laptop-padding{
 
-}
+
+
 .create-form{
   display: flex;
   flex-direction: column;
@@ -24,38 +25,72 @@
 .create-input-container{
   display: flex;
   flex-direction: column;
+  height: 100%;
+  
 }
-.input-image-link{
+.input-image-link {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 0%;
+  padding: 3%;
+  margin-bottom: 20px;
 }
-.input-name{
+.input-name {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-price{
+.input-price {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-description{
+.input-description {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-processor{
+.input-processor {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-memory{
+.input-memory {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-hardrive{
+.input-hardrive {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-buy-link{
+.input-buy-link {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  /* margin-bottom: 20px; */
 }
 .create-form-button-div{
   display: flex;
@@ -69,4 +104,56 @@
   border-style: none;
   height: 7vh;
   width: 20vw;
+
+  margin-bottom: 105px;
 }
+
+@media screen and (max-width: 769px) {
+
+  #create-laptop {
+    height: 407px;
+  }
+
+  .create-form-submit-button {
+    margin-bottom: 15px;
+  }
+  
+
+}
+
+@media screen and (max-width: 426px) {
+
+  #create-laptop {
+    height: 283px;
+  }
+
+  .create-form-submit-button {
+    margin-bottom: 150px;
+  }
+
+  .input-image-link {
+    margin-bottom: 12px;
+  }
+  
+
+}
+
+@media screen and (max-width: 376px) {
+
+  #create-laptop {
+    height: 256px;
+  }
+
+  .create-form-submit-button {
+    margin-bottom: 178px;
+  }
+
+  .input-image-link {
+    margin-bottom: 12px;
+  }
+  
+
+}
+
+
+
