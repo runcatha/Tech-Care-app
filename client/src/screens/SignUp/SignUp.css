@@ -53,11 +53,6 @@
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   margin-left: 30%;
-  transition: .5s ease-out;
-}
-
-.sign-up-button:hover{
-  background-position: left;
 }
 
 @media all and (max-width: 375px) {
