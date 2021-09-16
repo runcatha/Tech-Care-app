@@ -41,6 +41,42 @@ const insertData = async () => {
   const laptops =
     [
       {
+        image_url: "https://i.imgur.com/mWUv1nn.jpg",
+        name: 'Apple MacBook Air (M1, 2020)',
+        price: '1249.00',
+        description: `-- Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power. ---`,
+        processor: 'Apple M1 Chip',
+        memory: '8 GB Ram - 3733MHz LPDDR4X',
+        hardrive: '512 GB memory',
+        buy_link: 'https://www.amazon.com/Apple-MacBook-13-inch-512GB-Storage/dp/B08N5M9XBS/ref=sr_1_1_[…]fYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+      }]
+      },
+      {
+        image_url: "https://i.imgur.com/D1UJuPb.jpg",
+        name: 'Dell Inspiron 14 5000',
+        price: '755.63',
+        description: `The Dell Inspiron 14 5000 is a great all-round laptop for programming, and it costs a lot less than many of the laptops on this list, but without skimping on features or performance.
+  
+        So, it's got a high resolution Full HD display, a quad-core processor and fast SSD storage, all of which means this is a dependable laptop that will keep up with any of your demands while you're programming.
+        
+        Sure, it doesn't boast the premium style of its more expensive competitors, but if you're on a tight budget, and you want a laptop that will do everything that you need it to, and you don't care about visual flair or features that you're never going to use in your day-to-day programming, then this is definitely a laptop worth considering.`,
+        processor: '8th Gen Intel Quad Core i7-8565U',
+        memory: '8GB RAM',
+        hardrive: '256GB SSD',
+        buy_link: 'https://www.amazon.com/dp/B07X47L4N4?tag=georiot-us-default-20&th=1&psc=1&ascsubtag=cbq-us-9580421261723308000-20&geniuslink=true',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+      }]
+      },
+      {
         image_url: "https://i.imgur.com/RTEHReW.jpg",
         name: 'Dell XPS 15 (2020)',
         price: '1059.99',
@@ -59,32 +95,20 @@ const insertData = async () => {
       }]
       },
       {
-        image_url: "https://i.imgur.com/mWUv1nn.jpg",
-        name: 'Apple MacBook Air (M1, 2020)',
-        price: '1249.00',
-        description: `-- Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power. ---`,
-        processor: 'Apple M1 Chip',
-        memory: '8 GB Ram - 3733MHz LPDDR4X',
-        hardrive: '512 GB memory',
-        buy_link: 'https://www.amazon.com/Apple-MacBook-13-inch-512GB-Storage/dp/B08N5M9XBS/ref=sr_1_1_[…]fYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==',
-        userId: user3,
-      reviews: [{
-        author: "Bruno G.",
-        rating: 5,
-        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
-      }]
-      },
-      {
-        image_url: "https://i.imgur.com/EpltLRK.jpg",
-        name: 'LG Gram 17 (2021)',
-        price: '1689.00',
-        description: `If you're after a large-screen laptop to do your coding on, then the LG Gram 17 (2021) is the perfect choice. It has a gorgeous screen that's high resolution and large, giving you plenty of workspace. However, this is a laptop that proves you don't have to sacrifice portability and comfort for screen size, as it's impressively light. This means you can comfortably carry it around with you – perfect for anyone who travels a lot.
-
-        It's also got one of the best battery lives we've seen in a Windows 10 laptop, mainly thanks to the new Intel 11th generation hardware that's powering this new laptop for 2021. So, you can work anywhere you like, safe in the knowledge that the battery will easily last you a whole work day – and longer.`,
-        processor: 'i7-1165G7 (2.8GHz, Turbo up to 4.7GHz, L3 Cache 12MB)',
-        memory: '16GB LPDDR4X 4266MHz, -16GB (On Board)',
-        hardrive: 'M.2 2280 SSD (Solid State Drive)',
-        buy_link: 'https://www.amazon.com/dp/B08SW1LTST?tag=georiot-us-default-20&th=1&psc=1&ascsubtag=cbq-us-5763924590665683000-20&geniuslink=true',
+        image_url: "https://i.imgur.com/G7BQ8wd.jpg",
+        name: 'HP Envy 13',
+        price: '619.99',
+        description: `The new HP Envy 13 is a great pick for programmers looking for a stylish yet dependable laptop to work on. 
+  
+        HP recently made big changes to this popular 13-inch laptop by reducing the size and weight. Coupled with a high-quality touch-sensitive display, it’s both powerful and super portable. It's also overhauled the body of the laptop, giving it a luxurious all-metal design that gives this laptop a beautiful premium look and feel, while also protecting it from knocks and bumps. It certainly earns the ‘Envy’ moniker - use this in an office and you'll be getting appreciative glances from your co-workers.
+        
+        The keyboard has plenty of travel, with page up and down keys, and the trackpad is large enough to be extremely comfortable – both critical aspects of a laptop for long coding sessions.
+        
+        `,
+        processor: 'Intel® Core™ i5-1135G7',
+        memory: '8 GB',
+        hardrive: '256 GB',
+        buy_link: 'https://www.hp.com/us-en/shop/ConfigureView?langId=-1&storeId=10151&catEntryId=3074457345619767818&configId=1F5L3AV_100019&source=aw&subacctid=103504&subacctname=Future+Publishing.&adcampaigngroup=91539&awc=7168_1631318906_d2b1a2f183c85862920859a50172fe54&jumpid=af_gen_nc_ns&utm_medium=af&utm_source=aw&utm_campaign=Future+Publishing.',
         userId: user3,
       reviews: [{
         author: "Bruno G.",
@@ -114,6 +138,48 @@ const insertData = async () => {
         description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
       }]
       },
+      {
+        image_url: "https://i.imgur.com/EpltLRK.jpg",
+        name: 'LG Gram 17 (2021)',
+        price: '1689.00',
+        description: `If you're after a large-screen laptop to do your coding on, then the LG Gram 17 (2021) is the perfect choice. It has a gorgeous screen that's high resolution and large, giving you plenty of workspace. However, this is a laptop that proves you don't have to sacrifice portability and comfort for screen size, as it's impressively light. This means you can comfortably carry it around with you – perfect for anyone who travels a lot.
+
+        It's also got one of the best battery lives we've seen in a Windows 10 laptop, mainly thanks to the new Intel 11th generation hardware that's powering this new laptop for 2021. So, you can work anywhere you like, safe in the knowledge that the battery will easily last you a whole work day – and longer.`,
+        processor: 'i7-1165G7 (2.8GHz, Turbo up to 4.7GHz, L3 Cache 12MB)',
+        memory: '16GB LPDDR4X 4266MHz, -16GB (On Board)',
+        hardrive: 'M.2 2280 SSD (Solid State Drive)',
+        buy_link: 'https://www.amazon.com/dp/B08SW1LTST?tag=georiot-us-default-20&th=1&psc=1&ascsubtag=cbq-us-5763924590665683000-20&geniuslink=true',
+        userId: user3,
+      reviews: [{
+        author: "Bruno G.",
+        rating: 5,
+        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+      }]
+    },
+    {
+      image_url: "https://i.imgur.com/bLwdOA5.jpg",
+      name: 'Lenovo ThinkPad P1 (Gen 2)',
+      price: '1559.00',
+      description: `If you're after a laptop to take your programming to another level, then the Lenovo ThinkPad P1 is worth considering.
+
+      This seriously powerful workstation laptop offers professional-grade Xeon processors, with up to six cores, an Nvidia Quadro T2000 graphics card and up to 64GB of memory.
+      
+      You can stuff it with up to 4TB of nVME SSD storage, and opt for a 15.6-inch 4K display that’s not only touch-sensitive but colour-accurate too. It’s a great general-purpose workstation, capable of all kinds of visual design work and heavy lifting processor-intensive tasks. 
+      
+      Of course, it works great for coding as well. That’s partly thanks to Lenovo’s excellent keyboard design, but in general, the ThinkPad P1 is superbly built, including a semi-rugged chassis that can survive light knocks, and a very healthy selection of ports.
+      
+      `,
+      processor: '9th Gen Intel® Core™ i7 with vPro',
+      memory: '16 GB DDR4',
+      hardrive: '512 GB PCIe SSD',
+      buy_link: 'https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/p1-gen-2/22ws2wpp102',
+      userId: user3,
+    reviews: [{
+      author: "Bruno G.",
+      rating: 5,
+      description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
+    }]
+    },
       {
         image_url: "https://i.imgur.com/snpFfkJ.jpg",
         name: 'MacBook Pro 13-inch (M1, 2020)',
@@ -151,72 +217,6 @@ const insertData = async () => {
         memory: '8GB RAM',
         hardrive: '256 GB SSD',
         buy_link: 'https://www.bestbuy.com/site/microsoft-surface-laptop-4-13-5-touch-screen-amd-ryzen-5-surface-edition-8gb-memory-256gb-ssd-latest-model-platinum/6455189.p?acampID=0&cmp=RMX&irclickid=0vBUxRxWjxyITA6SPQQBEz9fUkBQy-zAKRtoxY0&irgwc=1&loc=Narrativ&mpid=376373&ref=198&skuId=6455189',
-        userId: user3,
-      reviews: [{
-        author: "Bruno G.",
-        rating: 5,
-        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
-      }]
-      },
-      {
-        image_url: "https://i.imgur.com/D1UJuPb.jpg",
-        name: 'Dell Inspiron 14 5000',
-        price: '755.63',
-        description: `The Dell Inspiron 14 5000 is a great all-round laptop for programming, and it costs a lot less than many of the laptops on this list, but without skimping on features or performance.
-
-        So, it's got a high resolution Full HD display, a quad-core processor and fast SSD storage, all of which means this is a dependable laptop that will keep up with any of your demands while you're programming.
-        
-        Sure, it doesn't boast the premium style of its more expensive competitors, but if you're on a tight budget, and you want a laptop that will do everything that you need it to, and you don't care about visual flair or features that you're never going to use in your day-to-day programming, then this is definitely a laptop worth considering.`,
-        processor: '8th Gen Intel Quad Core i7-8565U',
-        memory: '8GB RAM',
-        hardrive: '256GB SSD',
-        buy_link: 'https://www.amazon.com/dp/B07X47L4N4?tag=georiot-us-default-20&th=1&psc=1&ascsubtag=cbq-us-9580421261723308000-20&geniuslink=true',
-        userId: user3,
-      reviews: [{
-        author: "Bruno G.",
-        rating: 5,
-        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
-      }]
-      },
-      {
-        image_url: "https://i.imgur.com/bLwdOA5.jpg",
-        name: 'Lenovo ThinkPad P1 (Gen 2)',
-        price: '1559.00',
-        description: `If you're after a laptop to take your programming to another level, then the Lenovo ThinkPad P1 is worth considering.
-
-        This seriously powerful workstation laptop offers professional-grade Xeon processors, with up to six cores, an Nvidia Quadro T2000 graphics card and up to 64GB of memory.
-        
-        You can stuff it with up to 4TB of nVME SSD storage, and opt for a 15.6-inch 4K display that’s not only touch-sensitive but colour-accurate too. It’s a great general-purpose workstation, capable of all kinds of visual design work and heavy lifting processor-intensive tasks. 
-        
-        Of course, it works great for coding as well. That’s partly thanks to Lenovo’s excellent keyboard design, but in general, the ThinkPad P1 is superbly built, including a semi-rugged chassis that can survive light knocks, and a very healthy selection of ports.
-        
-        `,
-        processor: '9th Gen Intel® Core™ i7 with vPro',
-        memory: '16 GB DDR4',
-        hardrive: '512 GB PCIe SSD',
-        buy_link: 'https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/p1-gen-2/22ws2wpp102',
-        userId: user3,
-      reviews: [{
-        author: "Bruno G.",
-        rating: 5,
-        description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
-      }]
-      },
-      {
-        image_url: "https://i.imgur.com/G7BQ8wd.jpg",
-        name: 'HP Envy 13',
-        price: '619.99',
-        description: `The new HP Envy 13 is a great pick for programmers looking for a stylish yet dependable laptop to work on. 
-
-        HP recently made big changes to this popular 13-inch laptop by reducing the size and weight. Coupled with a high-quality touch-sensitive display, it’s both powerful and super portable. It's also overhauled the body of the laptop, giving it a luxurious all-metal design that gives this laptop a beautiful premium look and feel, while also protecting it from knocks and bumps. It certainly earns the ‘Envy’ moniker - use this in an office and you'll be getting appreciative glances from your co-workers.
-        
-        The keyboard has plenty of travel, with page up and down keys, and the trackpad is large enough to be extremely comfortable – both critical aspects of a laptop for long coding sessions.
-        
-        `,
-        processor: 'Intel® Core™ i5-1135G7',
-        memory: '8 GB',
-        hardrive: '256 GB',
-        buy_link: 'https://www.hp.com/us-en/shop/ConfigureView?langId=-1&storeId=10151&catEntryId=3074457345619767818&configId=1F5L3AV_100019&source=aw&subacctid=103504&subacctname=Future+Publishing.&adcampaigngroup=91539&awc=7168_1631318906_d2b1a2f183c85862920859a50172fe54&jumpid=af_gen_nc_ns&utm_medium=af&utm_source=aw&utm_campaign=Future+Publishing.',
         userId: user3,
       reviews: [{
         author: "Bruno G.",
