@@ -10,28 +10,32 @@ const insertData = async () => {
   const user1 = new User({
     username: 'cathleen',
     email: 'carunde8@gmail.com',
-    password_digest: await bcrypt.hash('cathleen!', 11)
+    password_digest: await bcrypt.hash('cathleen!', 11),
+    laptops: []
   })
   await user1.save()
 
   const user2 = new User({
     username: 'esther',
     email: 'estherryu77@gmail.com',
-    password_digest: await bcrypt.hash('esther!', 11)
+    password_digest: await bcrypt.hash('esther!', 11),
+    laptops: []
   })
   await user2.save()
 
   const user3 = new User({
     username: 'adanne',
     email: 'audumah94@gmail.com',
-    password_digest: await bcrypt.hash('adanne!', 11)
+    password_digest: await bcrypt.hash('adanne!', 11),
+    laptops: []
   })
   await user3.save()
 
   const user4 = new User({
     username: 'theo',
     email: '456theochang@gmail.com',
-    password_digest: await bcrypt.hash('theo!', 11)
+    password_digest: await bcrypt.hash('theo!', 11),
+    laptops: []
   })
   await user4.save()
   const laptops =
@@ -220,22 +224,6 @@ const insertData = async () => {
         description: "Risus ultricies tristique nulla aliquet. Id volutpat lacus laoreet non curabitur gravida. Enim diam vulputate ut pharetra sit amet aliquam id diam. Duis convallis convallis tellus id interdum velit laoreet id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Pellentesque sit amet porttitor eget. Sit amet consectetur adipiscing elit ut aliquam purus sit. Massa tincidunt nunc pulvinar sapien. Aliquam faucibus purus in massa tempor nec feugiat nisl. Nunc sed blandit libero volutpat sed cras ornare arcu. Pharetra diam sit amet nisl suscipit."
       }]
       }
-      // {
-      //   image_url: "",
-      //   name: 'Google Pixelbook Go',
-      //   price: '$649',
-      //   description: `For Android developers, a Chromebook might seem a natural choice for the best possible integration with Google’s software and services, with full support for running Android software natively. However, many Chromebooks are designed to be highly affordable, with lower-spec features and performance suffering to bring the price down.
-
-      //   The Pixelbook Go is an upgrade from more basic models, designed to compete with the bigger laptop manufacturers. It still runs ChromeOS, which supports Google’s Android Studio development tools, but the hardware is right up there with a standard Windows laptop. You can also run Linux apps as well.
-        
-      //   The Pixelbook Go is certainly the best Chromebook ever made. It packs some impressive hardware, including an Intel Core i7 processor, a choice of 8GB or 16GB RAM and a large and vibrant 1,920 x 1,080 screen or 4K touch screen if you really want to show off.
-        
-      //   This all makes it a fantastic laptop for programming on, with performance that matches most Windows 10 laptops, but with an incredibly long-lasting battery that means the Pixelbook Go will keep on going even after many Windows 10 laptops give up the ghost.`,
-      //   processor: 'Intel Core m3',
-      //   memory: '8GB',
-      //   hardrive: '64GB',
-      //   buy_link: 'https://www.bestbuy.com/site/google-pixelbook-go-13-3-touch-screen-chromebook-intel-core-m3-8gb-memory-64gb-solid-state-drive-just-black/6382912.p?acampID=0&cmp=RMX&irclickid=0vBUxRxWjxyITA6SPQQBEz9fUkBQUxwwKRtoxY0&irgwc=1&loc=Narrativ&mpid=376373&ref=198&skuId=6382912'
-      // },
     ]
 
   await Laptop.insertMany(laptops)

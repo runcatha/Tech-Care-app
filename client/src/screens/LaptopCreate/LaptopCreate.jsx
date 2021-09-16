@@ -112,7 +112,7 @@ const LaptopCreate = (props) => {
               placeholder='Buylink'
               value={laptop.buy_link}
               name='buylink'
-              required
+              // required
               autoFocus
               onChange={handleChange}
             />
