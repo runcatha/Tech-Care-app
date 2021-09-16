@@ -65,7 +65,7 @@ const LaptopEdit = (props) => {
               onChange={handleChange}
             />
             <input
-              className='input-name'
+              className='edit-input-name'
               placeholder='Name'
               value={laptop.name}
               name='name'
@@ -74,7 +74,7 @@ const LaptopEdit = (props) => {
               onChange={handleChange}
             />
             <input
-              className='input-price'
+              className='edit-input-price'
               placeholder='Price'
               value={laptop.price}
               name='price'
@@ -82,7 +82,7 @@ const LaptopEdit = (props) => {
               onChange={handleChange}
             />
             <textarea
-              className='input-description'
+              className='edit-input-description'
               placeholder='Description'
               value={laptop.description}
               name='description'
@@ -91,7 +91,7 @@ const LaptopEdit = (props) => {
             />
 
             <input
-              className='input-processor'
+              className='edit-input-processor'
               placeholder='Processor'
               value={laptop.processor}
               name='processor'
@@ -99,7 +99,7 @@ const LaptopEdit = (props) => {
               onChange={handleChange}
             />
             <input
-              className='input-memory'
+              className='edit-input-memory'
               placeholder='Memory'
               value={laptop.memory}
               name='memory'
@@ -107,7 +107,7 @@ const LaptopEdit = (props) => {
               onChange={handleChange}
             />
             <input
-              className='input-hardrive'
+              className='edit-input-hardrive'
               placeholder='Hardrive'
               value={laptop.hardrive}
               name='hardrive'
@@ -115,7 +115,7 @@ const LaptopEdit = (props) => {
               onChange={handleChange}
             />
             <input
-              className='input-buy-link'
+              className='edit-input-buy-link'
               placeholder='Buy-Link'
               value={laptop.buy_link}
               name='buy-link'
