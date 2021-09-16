@@ -9,11 +9,12 @@
 }
 #create-laptop{
   width: 100%;
-  height: 80%;
+  height: 59%;
+  display: block;
 }
-.create-laptop-padding{
 
-}
+
+
 .create-form{
   display: flex;
   flex-direction: column;
@@ -24,38 +25,72 @@
 .create-input-container{
   display: flex;
   flex-direction: column;
+  height: 100%;
+  
 }
-.input-image-link{
+.add-input-image-link {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 0%;
+  padding: 3%;
+  margin-bottom: 20px;
 }
-.input-name{
+.add-input-name {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-price{
+.add-input-price {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-description{
+.add-input-description {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-processor{
+.add-input-processor {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-memory{
+.add-input-memory {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-hardrive{
+.add-input-hardrive {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  margin-bottom: 20px;
 }
-.input-buy-link{
+.add-input-buy-link {
   border-style: none;
   background-color: #c4c4c4;
+  color: #514538;
+  margin: 2% 0%;
+  padding: 3% 0%;
+  /* margin-bottom: 20px; */
 }
 .create-form-button-div{
   display: flex;
@@ -69,4 +104,174 @@
   border-style: none;
   height: 7vh;
   width: 20vw;
+
+  margin-bottom: 225px;
 }
+
+@media screen and (max-width: 769px) {
+
+  #create-laptop {
+    height: 357px;
+  }
+
+  .add-input-image-link {
+    
+    margin-bottom: 12px;
+  }
+  .add-input-name {
+    
+    margin-bottom: 12px;
+  }
+  .add-input-price {
+   
+    margin-bottom: 12px;
+  }
+  .add-input-description {
+    
+    margin-bottom: 12px;
+  }
+  .add-input-processor {
+    
+    margin-bottom: 12px;
+  }
+  .add-input-memory {
+    
+    margin-bottom: 12px;
+  }
+  .add-input-hardrive {
+   
+    margin-bottom: 12px;
+  }
+  .add-input-buy-link {
+    
+    padding: 3% 0%;
+    /* margin-bottom: 20px; */
+  }
+
+  .create-form-submit-button {
+    margin-bottom: 155px;
+  }
+  
+
+}
+
+@media screen and (max-width: 426px) {
+
+  #create-laptop {
+    height: 261px;
+  }
+
+  .add-input-image-link {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 9px;
+  }
+  .add-input-name {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 9px;
+  }
+  .add-input-price {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 9px;
+  }
+  .add-input-description {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 9px;
+  }
+  .add-input-processor {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 9px;
+  }
+  .add-input-memory {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 9px;
+  }
+  .add-input-hardrive {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 9px;
+  }
+  .add-input-buy-link {
+    
+    padding-top: 4px;
+    padding-bottom: 4px;
+    /* margin-bottom: 20px; */
+  }
+
+  .create-form-submit-button {
+    margin-bottom: 270px;
+    height: 5vh;
+  }
+
+  
+  
+
+}
+
+@media screen and (max-width: 376px) {
+
+  #create-laptop {
+    height: 206px;
+  }
+
+
+  .add-input-image-link {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+  }
+  .add-input-name {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+  }
+  .add-input-price {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+  }
+  .add-input-description {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+  }
+  .add-input-processor {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+  }
+  .add-input-memory {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+  }
+  .add-input-hardrive {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+  }
+  .add-input-buy-link {
+    
+    padding: 3% 0%;
+    /* margin-bottom: 20px; */
+  }
+
+  .create-form-submit-button {
+    margin-bottom: 328px;
+    height: 5vh;
+  }
+
+  .input-image-link {
+    margin-bottom: 12px;
+  }
+  
+
+}
+
+
+

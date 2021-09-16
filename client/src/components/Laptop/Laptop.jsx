@@ -5,7 +5,7 @@ import { Card } from 'react-bootstrap';
 function Laptop(props) {
 
   console.log(props)
-          
+
   return (
     <>
       {/* <Link className="laptop" to={`/laptops/${props._id}`}>
@@ -17,25 +17,22 @@ function Laptop(props) {
   )
 } */}
 
-          
+
       <div className='laptops-div' >
         {/* style={{ width: '18rem' }} */}
-        <Card className='card-container' style={{ height: '14rem'}} >
-          <Card.Img className='card-img' variant="top" src={props.image_url} style={{ height: '7rem' }}/>
-          <Card.Body style={{ height: '15rem'}}>
+        <Card className='card-container' style={{ height: '14rem' }} >
+          <Card.Img className='card-img' variant="top" src={props.image_url} style={{ height: '7rem' }} />
+          <Card.Body style={{ height: '7rem' }}>
             <Card.Title className='card-name'>{props.name}</Card.Title>
-            <Card.Text className='card-price'>
-              ${props.price}
-            </Card.Text>
-    
+            <Card.Text className='card-price'>${props.price}</Card.Text>
           </Card.Body>
         </Card>
       </div>
     </>
-      
-     
+
+
   )
 }
-    
 
-  export default Laptop;
+
+export default Laptop;

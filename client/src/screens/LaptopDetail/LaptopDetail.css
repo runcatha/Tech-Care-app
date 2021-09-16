@@ -87,7 +87,17 @@ h2 {
   padding: 20px 70px;
   font-size: 20px;
   border-style: none;
+  text-decoration: none;
+  color: black;
 }
+
+.directLinkbutton{
+  transition: ease-out .2s;
+}
+.directLinkbutton:hover{
+  transform: scale(1.1);
+}
+
 @media screen and (max-width: 769px) {
   .laptop-detail {
     display: flex;
@@ -125,7 +135,8 @@ h2 {
     font-size: 20px;
     border-style: none;
   }
-}
+
+
 
 @media screen and (max-width: 376px) {
   .laptop-detail {

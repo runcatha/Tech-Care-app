@@ -13,7 +13,7 @@ export const getLaptops = async (req, res) => {
 export const getLaptop = async (req, res) => {
   try {
     const { id } = req.params
-    const laptop = await Laptop.findById(id)
+    const laptop = await Laptop.findById(id).populate('userId')
     if (laptop) {
       return res.json(laptop)
     }

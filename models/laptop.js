@@ -10,7 +10,7 @@ const Laptop = new Schema(
     processor: { type: String, required: true },
     memory: { type: String, required: true },
     hardrive: { type: String, required: true },
-    buy_link: { type: String, required: true },
+    // buy_link: { type: String, required: true },
     userId: {type: Schema.Types.ObjectId, ref: 'users'},
     reviews: [
       {
@@ -23,6 +23,7 @@ const Laptop = new Schema(
   // { timestamps: true }
   { timestamps: true, toJSON: { virtuals: true } }
 )
+
 Laptop.virtual('rating').get(function () {
   return (
     this.reviews.reduce((total, review) => total + review.rating, 0) /
