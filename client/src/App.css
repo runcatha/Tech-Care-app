@@ -48,6 +48,7 @@
 }
 button{
   transition: ease-out .2s;
+  border: none;
 }
 
 button:hover{
