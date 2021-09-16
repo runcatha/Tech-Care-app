@@ -111,7 +111,7 @@ const LaptopCreate = (props) => {
               className='input-buy-link'
               placeholder='Buylink'
               value={laptop.buy_link}
-              name='buylink'
+              name='buy_link'
               required
               autoFocus
               onChange={handleChange}
