@@ -2,19 +2,23 @@ import { useState, useEffect } from "react";
 import "./LaptopDetail.css";
 import { Layout, ReviewForm, Reviews } from "../../components";
 import { getLaptop, deleteLaptop, updateLaptop } from "../../services/laptops";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Redirect } from "react-router-dom";
 import StarRating from 'star-rating-react'
+import { useHistory } from 'react-router-dom'
+import axios from "axios";
 
 const LaptopDetail = (props) => {
   // const [laptop, setLaptop] = useState(null);
-  // const [isLoaded, setLoaded] = useState(false);
-  // const { id } = useParams();
-
+  const [isLoaded, setLoaded] = useState(false);
+  const [isUpdated, setUpdated] = useState(false)
+  const history = useHistory()
+  const { id } = useParams()
+  const [toggleFetch, setToggleFetch] = useState(false)
   const [laptop, setLaptop] = useState({
-    name: '',
-    description: '',
     image_url: '',
+    name: '',
     price: '',
+    description: '',
     buy_link: '',
     reviews: [],
   })
@@ -23,17 +27,16 @@ const LaptopDetail = (props) => {
     rating: '',
     description: '',
   })
-  const [isLoaded, setLoaded] = useState(false)
-  const { id } = useParams()
 
   useEffect(() => {
     const fetchLaptop = async () => {
       const laptop = await getLaptop(id);
+      console.log(laptop)
       setLaptop(laptop);
       setLoaded(true);
     };
     fetchLaptop();
-  }, [id]);
+  }, [id, toggleFetch]);
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -48,12 +51,22 @@ const LaptopDetail = (props) => {
     laptop.reviews.push(review)
     setLaptop(laptop)
     await updateLaptop(id, laptop)
+    setToggleFetch((toggleFetch) => !toggleFetch)
+    history.push('/laptops/:id')
   }
 
+  const handleDelete = async (event) => {
+    event.preventDefault()
+    await deleteLaptop(id, laptop)
+    setUpdated(true)
+  }
+  if (isUpdated) {
+    return <Redirect to={'/laptops'} />
+  }
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-
+console.log(laptop.buy_link)
   return (
     <Layout user={props.user}>
       <div className="laptop-detail">
@@ -76,13 +89,12 @@ const LaptopDetail = (props) => {
           />
           <div className='detail'>
             <div className='name'>{laptop.name}</div>
-            <div className='seller'>by {laptop.userId.username}</div>
             <div className='rating'>
               <StarRating
                 size={laptop.rating}
                 value={laptop.rating}
                 onChange={function (val) {
-                  console.log(val)
+                  // console.log(val)
                 }}
               />
             </div>
@@ -91,12 +103,16 @@ const LaptopDetail = (props) => {
               <Link className="edit-button" to={`/laptops/${laptop._id}/edit`}>
                 <button className="editbutton">Edit</button>
               </Link>
-              <button
-                className="delete-button"
-                onClick={() => deleteLaptop(laptop._id)}
-              >
-                Delete
-              </button>
+
+              <div>
+                <button
+                  className="delete-button"
+                  onClick={() => deleteLaptop(laptop._id)}
+                >
+                  Delete
+                </button>
+              </div>
+
             </div>
           </div>
         </div>
