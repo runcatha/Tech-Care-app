@@ -111,8 +111,11 @@ const LaptopCreate = (props) => {
               className='add-input-buy-link'
               placeholder='Buylink'
               value={laptop.buy_link}
+
+
               name='buy_link'
               required
+
               autoFocus
               onChange={handleChange}
               type="url"

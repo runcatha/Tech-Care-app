@@ -31,8 +31,8 @@ const ReviewForm = ({ author, rating, description, onChange, onSubmit }) => {
                 required
                 onChange={(e) => onChange(e)}
             />
-      </form>
             <button type='submit' className="review-submit-button">Submit</button>
+      </form>
       </>
     )
 }
