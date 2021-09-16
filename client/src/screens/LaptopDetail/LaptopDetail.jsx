@@ -102,13 +102,16 @@ const LaptopDetail = (props) => {
               <Link className="edit-button" to={`/laptops/${laptop._id}/edit`}>
                 <button className="editbutton">Edit</button>
               </Link>
-              <button
-                className="delete-button"
-                // onClick={() => deleteLaptop(laptop._id)}
-                onClick={handleDelete}
-              >
-                Delete
-              </button>
+
+              <div>
+                <button
+                  className="delete-button"
+                  onClick={() => deleteLaptop(laptop._id)}
+                >
+                  Delete
+                </button>
+              </div>
+
             </div>
           </div>
         </div>

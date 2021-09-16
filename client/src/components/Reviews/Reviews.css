@@ -8,6 +8,12 @@
   align-items: center;
 }
 
+@media screen and (max-width: 769px) {
+  .laptop-reviews{
+    padding-top: 3%;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .laptop-reviews {
     display: flex;
