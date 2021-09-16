@@ -4,7 +4,7 @@
 
 Wireframe containing schema for project.
 
-https://i.imgur.com/qiXCWRd.png
+![image](https://user-images.githubusercontent.com/87097080/133626189-dd70ce4d-2488-4556-b082-a3d73a315b18.png)
 
 https://www.figma.com/file/qZsPfuKeihI57g4hbDeY0n/TechCare?node-id=20%3A72
 
@@ -12,7 +12,7 @@ https://www.figma.com/file/qZsPfuKeihI57g4hbDeY0n/TechCare?node-id=20%3A72
 
 Component hierarchy for project.
 
-https://i.imgur.com/sxufqkk.png
+![image](https://user-images.githubusercontent.com/87097080/133626051-f858fc28-e5df-4f52-804e-755a5cc7cc57.png)
 
 https://whimsical.com/tech-care-9ocJGjmBHqRNU2xdjD3HHe
 
