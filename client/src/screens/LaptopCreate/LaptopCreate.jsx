@@ -39,7 +39,9 @@ const LaptopCreate = (props) => {
     <Layout user={props.user}>
       <div className='create-form-content-container'>
         <div className='create-laptop-image-container'>
-          <img src='https://i.imgur.com/PenAzS5.jpg'
+          {/* <img src='https://i.imgur.com/PenAzS5.jpg' */}
+          {/* <img src='https://i.imgur.com/rsMG0FG.jpg' */}
+          <img src='https://i.imgur.com/0WzJwf5.jpg'
             // className='create-laptop-pic'
             id='create-laptop'
             alt='create-laptop' />
