@@ -15,10 +15,10 @@ const LaptopDetail = (props) => {
   const { id } = useParams()
   const [toggleFetch, setToggleFetch] = useState(false)
   const [laptop, setLaptop] = useState({
-    name: '',
-    description: '',
     image_url: '',
+    name: '',
     price: '',
+    description: '',
     buy_link: '',
     reviews: [],
   })
@@ -31,6 +31,7 @@ const LaptopDetail = (props) => {
   useEffect(() => {
     const fetchLaptop = async () => {
       const laptop = await getLaptop(id);
+      console.log(laptop)
       setLaptop(laptop);
       setLoaded(true);
     };
@@ -65,7 +66,7 @@ const LaptopDetail = (props) => {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-  console.log(laptop.buy_link)
+
   return (
     <Layout user={props.user}>
       <div className="laptop-detail">
@@ -93,7 +94,7 @@ const LaptopDetail = (props) => {
                 size={laptop.rating}
                 value={laptop.rating}
                 onChange={function (val) {
-                  console.log(val)
+                  // console.log(val)
                 }}
               />
             </div>
