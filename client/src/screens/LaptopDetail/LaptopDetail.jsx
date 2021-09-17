@@ -65,7 +65,7 @@ const LaptopDetail = (props) => {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-
+  console.log(laptop.buy_link)
   return (
     <Layout user={props.user}>
       <div className="laptop-detail">
