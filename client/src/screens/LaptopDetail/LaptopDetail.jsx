@@ -7,12 +7,14 @@ import StarRating from 'star-rating-react'
 import { useHistory } from 'react-router-dom'
 import axios from "axios";
 
+
+
 const LaptopDetail = (props) => {
   // const [laptop, setLaptop] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const [isUpdated, setUpdated] = useState(false)
-  const history = useHistory()
   const { id } = useParams()
+  const history = useHistory()
   const [toggleFetch, setToggleFetch] = useState(false)
   const [laptop, setLaptop] = useState({
     image_url: '',
@@ -27,6 +29,9 @@ const LaptopDetail = (props) => {
     rating: '',
     description: '',
   })
+
+
+  const { handleRedirect, user } = props
 
   useEffect(() => {
     const fetchLaptop = async () => {
@@ -47,12 +52,22 @@ const LaptopDetail = (props) => {
   }
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
-    laptop.reviews.push(review)
-    setLaptop(laptop)
-    await updateLaptop(id, laptop)
-    setToggleFetch((toggleFetch) => !toggleFetch)
-    history.push('/laptops/:id')
+    if (user !== null) {
+      event.preventDefault()
+      laptop.reviews.push(review)
+      setLaptop(laptop)
+      await updateLaptop(id, laptop)
+      setToggleFetch((toggleFetch) => !toggleFetch)
+      setReview({
+        author: '',
+        rating: '',
+        description: '',
+      })
+      history.push('/laptops/:id')
+    } else {
+      alert('Please sign in first')
+      history.push('/sign-in')
+    }
   }
 
   const handleDelete = async (event) => {
@@ -66,12 +81,14 @@ const LaptopDetail = (props) => {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-console.log(laptop.buy_link)
+
   return (
-    <Layout user={props.user}>
+
+    <Layout user={user}>
+
       <div className="laptop-detail">
         <div className="detail">
-          <div className="name">{laptop.name}</div>
+          <h1>Description</h1>
           <div className="description">{laptop.description}</div>
           <h1>Specifications</h1>
           <h2>Processor: {laptop.processor}</h2>
@@ -104,13 +121,15 @@ console.log(laptop.buy_link)
                 <button className="editbutton">Edit</button>
               </Link>
 
-              <div>
-                <button
-                  className="delete-button"
-                  onClick={() => deleteLaptop(laptop._id)}
-                >
-                  Delete
-                </button>
+              <div >
+                <Link to='/laptops' id="deleteButton">
+                  <button
+                    className="delete-button"
+                    onClick={() => deleteLaptop(laptop._id)}
+                  >
+                    Delete
+                  </button>
+                </Link>
               </div>
 
             </div>
@@ -127,8 +146,11 @@ console.log(laptop.buy_link)
           onChange={handleChange}
         />
         <Reviews reviews={laptop.reviews} />
-      </div>
+
+        </div>
+       
     </Layout>
+
   );
 };
 

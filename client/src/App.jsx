@@ -10,7 +10,8 @@ import SignOut from './screens/SignOut/SignOut'
 import SignUp from './screens/SignUp/SignUp'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { verifyUser } from './services/users'
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
   return (
     <div className="App">
       <div className='.mega-grid'>
+        
         <Switch>
           <Route exact path='/'>
             <Home user={user} />
@@ -38,7 +40,8 @@ const App = () => {
             <Laptops user={user} />
           </Route>
           <Route exact path='/laptops/:id'>
-            <LaptopDetail user={user} />
+            <LaptopDetail user={user}
+              handleRedirect={handleRedirect} />
           </Route>
           <Route path='/add-laptop' >
             {user ? < LaptopCreate user={user} /> : handleRedirect}
@@ -60,6 +63,7 @@ const App = () => {
     </div>
   );
 }
+          
 
 
 
