@@ -30,7 +30,8 @@ const LaptopDetail = (props) => {
     description: '',
   })
 
-  
+
+  const { handleRedirect, user } = props
 
   useEffect(() => {
     const fetchLaptop = async () => {
@@ -51,12 +52,22 @@ const LaptopDetail = (props) => {
   }
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
-    laptop.reviews.push(review)
-    setLaptop(laptop)
-    await updateLaptop(id, laptop)
-    setToggleFetch((toggleFetch) => !toggleFetch)
-    history.push('/laptops/:id')
+    if (user !== null) {
+      event.preventDefault()
+      laptop.reviews.push(review)
+      setLaptop(laptop)
+      await updateLaptop(id, laptop)
+      setToggleFetch((toggleFetch) => !toggleFetch)
+      setReview({
+        author: '',
+        rating: '',
+        description: '',
+      })
+      history.push('/laptops/:id')
+    } else {
+      alert('Please sign in first')
+      history.push('/sign-in')
+    }
   }
 
   const handleDelete = async (event) => {
@@ -72,8 +83,9 @@ const LaptopDetail = (props) => {
   }
 
   return (
-    <Layout user={props.user}>
-      
+
+    <Layout user={user}>
+
       <div className="laptop-detail">
         <div className="detail">
           <h1>Description</h1>

@@ -40,7 +40,8 @@ const App = () => {
             <Laptops user={user} />
           </Route>
           <Route exact path='/laptops/:id'>
-            <LaptopDetail user={user} />
+            <LaptopDetail user={user}
+              handleRedirect={handleRedirect} />
           </Route>
           <Route path='/add-laptop' >
             {user ? < LaptopCreate user={user} /> : handleRedirect}
