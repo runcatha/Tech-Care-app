@@ -42,7 +42,7 @@ const Home = (props) => {
             </div>
             <div className='home-mission-statment-link'>
               <div className='home-mission-statement'>
-                <p>Choosing your laptop can feel overwhelming with so many options. At Tech Care we’ve selected the best laptops out there for you to compare and choose from.  Happy coding!</p>
+                <p>As a developer, you rely on laptops to handle your coding tasks. At Tech-Care, we have created a guide of the best coding laptops to fit your specific needs. We hope you find the perfect laptop! Happy Coding!</p>
               </div>
               <div className='home-browse-selection-link'>
                 <Link to='/laptops' id='browse-link' >

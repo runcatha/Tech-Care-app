@@ -36,8 +36,8 @@
   margin: 0%;
   padding: 3%;
   margin-bottom: 10px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .edit-input-name {
   border-style: none;
@@ -46,8 +46,8 @@
   margin: 0%;
   padding: 3% 0%;
   margin-bottom: 10px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .edit-input-price {
   border-style: none;
@@ -56,8 +56,8 @@
   margin: 0%;
   padding: 3% 0%;
   margin-bottom: 5px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .edit-input-description {
   border-style: none;
@@ -66,8 +66,8 @@
   margin: 2% 0%;
   padding: 3% 0%;
   margin-bottom: 5px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .edit-input-processor {
   border-style: none;
@@ -76,8 +76,8 @@
   margin: 2% 0%;
   padding: 3% 0%;
   margin-bottom: 5px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .edit-input-memory {
   border-style: none;
@@ -86,8 +86,8 @@
   margin: 2% 0%;
   padding: 3% 0%;
   margin-bottom: 5px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .edit-input-hardrive {
   border-style: none;
@@ -96,8 +96,8 @@
   margin: 2% 0%;
   padding: 3% 0%;
   margin-bottom: 5px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .edit-input-buy-link {
   border-style: none;
@@ -105,16 +105,16 @@
   color: #514538;
   margin: 2% 0%;
   padding: 3% 0%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  /* margin-bottom: 20px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .edit-form-button-div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-right: 7%;
-  margin-bottom: 7%;
+  /* margin-bottom: 3%; */
 }
 .save-button {
   padding-top: 15px;
@@ -132,12 +132,12 @@
 @media screen and (max-width: 769px) {
   #doggo-programmer {
     width: 100%;
-    height: 58%;
+    height: 60%;
     display: block;
   }
 
   .save-button {
-    margin-bottom: 163px;
+    margin-bottom: 143px;
   }
 
 
@@ -154,13 +154,13 @@
   }
 
   .edit-input-price {
-    margin-bottom: 9px;
+    margin-bottom: 5px;
     padding-top: 7px;
     padding-bottom: 7px;
   }
 
   .edit-input-description {
-    margin-bottom: 9px;
+    margin-bottom: 5px;
     padding-top: 7px;
     padding-bottom: 7px;
   }
@@ -172,13 +172,13 @@
   }
 
   .edit-input-memory {
-    margin-bottom: 9px;
+    margin-bottom: 5px;
     padding-top: 7px;
     padding-bottom: 7px;
   }
 
   .edit-input-processor {
-    margin-bottom: 9px;
+    margin-bottom: 5px;
     padding-top: 7px;
     padding-bottom: 7px;
   }
@@ -193,10 +193,19 @@
 @media screen and (max-width: 426px) {
   #doggo-programmer {
     width: 100%;
-    height: 51%;
+    height: 55%;
 
     display: block;
   }
+
+  /* .edit-input-container {
+    margin-top: 60px;
+  }
+  
+  .edit-form {
+    margin-right: 115px;
+    width: 75%;
+  } */
 
   .edit-input-image-link {
     margin-bottom: 5px;
@@ -231,7 +240,7 @@
   }
 
   .save-button {
-    margin-bottom: 225px;
+    margin-bottom: 185px;
     /* margin-left: 10px; */
     padding-top: 9px;
     padding-bottom: 9px;
@@ -248,15 +257,15 @@
 @media screen and (max-width: 376px) {
   #doggo-programmer {
     width: 100%;
-    height: 42%;
+    height: 43%;
 
     display: block;
   }
 
   .edit-input-image-link {
     margin-bottom: 8px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 
   .edit-input-name {
@@ -266,7 +275,7 @@
   }
 
   .edit-input-price {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
   }
@@ -278,25 +287,30 @@
   }
 
   .edit-input-hardrive {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
   }
 
   .edit-input-memory {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
   }
 
   .edit-input-processor {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
   }
 
+  .edit-input-buy-link {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
   .save-button {
-    margin-bottom: 277px;
+    margin-bottom: 255px;
 
     padding-top: 8px;
     padding-bottom: 8px;
