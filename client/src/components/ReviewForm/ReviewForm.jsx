@@ -11,7 +11,7 @@ const ReviewForm = ({ author, rating, description, onChange, onSubmit }) => {
                 value={author}
                 name='author'
                 required
-                autoFocus
+                // autoFocus
                 onChange={(e) => onChange(e)}
             />
             <input

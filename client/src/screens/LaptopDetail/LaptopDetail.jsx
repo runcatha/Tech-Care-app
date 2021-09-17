@@ -7,6 +7,8 @@ import StarRating from 'star-rating-react'
 import { useHistory } from 'react-router-dom'
 import axios from "axios";
 
+
+
 const LaptopDetail = (props) => {
   // const [laptop, setLaptop] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
@@ -27,6 +29,8 @@ const LaptopDetail = (props) => {
     rating: '',
     description: '',
   })
+
+  
 
   useEffect(() => {
     const fetchLaptop = async () => {
@@ -69,6 +73,7 @@ const LaptopDetail = (props) => {
 
   return (
     <Layout user={props.user}>
+      
       <div className="laptop-detail">
         <div className="detail">
           <h1>Description</h1>
@@ -129,8 +134,11 @@ const LaptopDetail = (props) => {
           onChange={handleChange}
         />
         <Reviews reviews={laptop.reviews} />
-      </div>
-    </Layout >
+
+        </div>
+       
+    </Layout>
+
   );
 };
 
