@@ -11,8 +11,8 @@ const LaptopDetail = (props) => {
   // const [laptop, setLaptop] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const [isUpdated, setUpdated] = useState(false)
-  const history = useHistory()
   const { id } = useParams()
+  const history = useHistory()
   const [toggleFetch, setToggleFetch] = useState(false)
   const [laptop, setLaptop] = useState({
     image_url: '',
@@ -104,13 +104,15 @@ const LaptopDetail = (props) => {
                 <button className="editbutton">Edit</button>
               </Link>
 
-              <div>
-                <button
-                  className="delete-button"
-                  onClick={() => deleteLaptop(laptop._id)}
-                >
-                  Delete
-                </button>
+              <div >
+                <Link to='/laptops' id="deleteButton">
+                  <button
+                    className="delete-button"
+                    onClick={() => deleteLaptop(laptop._id)}
+                  >
+                    Delete
+                  </button>
+                </Link>
               </div>
 
             </div>
@@ -128,7 +130,7 @@ const LaptopDetail = (props) => {
         />
         <Reviews reviews={laptop.reviews} />
       </div>
-    </Layout>
+    </Layout >
   );
 };
 
