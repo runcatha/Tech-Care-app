@@ -46,6 +46,9 @@
 .edit-button {
   text-decoration: none;
 }
+#deleteButton{
+  text-decoration: none;
+}
 
 .delete-button {
   display: flex;
@@ -57,6 +60,7 @@
   padding: 20px 70px;
   font-size: 20px;
   border-style: none;
+  text-decoration: none;
 }
 
 .price {
@@ -143,4 +147,6 @@ h2 {
    margin-top: 13%;
   }
 }
+
+
 

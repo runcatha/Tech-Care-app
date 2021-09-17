@@ -7,12 +7,14 @@ import StarRating from 'star-rating-react'
 import { useHistory } from 'react-router-dom'
 import axios from "axios";
 
+
+
 const LaptopDetail = (props) => {
   // const [laptop, setLaptop] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const [isUpdated, setUpdated] = useState(false)
-  const history = useHistory()
   const { id } = useParams()
+  const history = useHistory()
   const [toggleFetch, setToggleFetch] = useState(false)
   const [laptop, setLaptop] = useState({
     image_url: '',
@@ -28,8 +30,8 @@ const LaptopDetail = (props) => {
     description: '',
   })
 
-  const { handleRedirect, user } = props
 
+  const { handleRedirect, user } = props
 
   useEffect(() => {
     const fetchLaptop = async () => {
@@ -81,7 +83,9 @@ const LaptopDetail = (props) => {
   }
 
   return (
+
     <Layout user={user}>
+
       <div className="laptop-detail">
         <div className="detail">
           <h1>Description</h1>
@@ -117,13 +121,15 @@ const LaptopDetail = (props) => {
                 <button className="editbutton">Edit</button>
               </Link>
 
-              <div>
-                <button
-                  className="delete-button"
-                  onClick={() => deleteLaptop(laptop._id)}
-                >
-                  Delete
-                </button>
+              <div >
+                <Link to='/laptops' id="deleteButton">
+                  <button
+                    className="delete-button"
+                    onClick={() => deleteLaptop(laptop._id)}
+                  >
+                    Delete
+                  </button>
+                </Link>
               </div>
 
             </div>
@@ -140,8 +146,11 @@ const LaptopDetail = (props) => {
           onChange={handleChange}
         />
         <Reviews reviews={laptop.reviews} />
-      </div>
+
+        </div>
+       
     </Layout>
+
   );
 };
 
