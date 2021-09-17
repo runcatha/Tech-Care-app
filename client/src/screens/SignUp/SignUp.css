@@ -44,7 +44,6 @@
 
 
 .sign-up-button{
-  border-radius: 5px;
   background-color: #B3D7EC;
   margin-top: 2%;
   text-align: right;
@@ -52,6 +51,10 @@
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   margin-left: 30%;
+}
+
+span{
+  text-decoration: underline;
 }
 
 @media all and (max-width: 375px) {

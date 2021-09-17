@@ -11,7 +11,9 @@ const Laptop = new Schema(
     memory: { type: String, required: true },
     hardrive: { type: String, required: true },
     buy_link: { type: String, required: true },
-    userId: {type: Schema.Types.ObjectId, ref: 'users'},
+
+    userId: { type: Schema.Types.ObjectId, ref: 'users' },
+
     reviews: [
       {
         author: { type: String, required: true },
