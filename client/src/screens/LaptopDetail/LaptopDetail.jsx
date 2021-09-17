@@ -70,7 +70,7 @@ const LaptopDetail = (props) => {
     <Layout user={props.user}>
       <div className="laptop-detail">
         <div className="detail">
-          <div className="name">{laptop.name}</div>
+          <h1>Description</h1>
           <div className="description">{laptop.description}</div>
           <h1>Specifications</h1>
           <h2>Processor: {laptop.processor}</h2>

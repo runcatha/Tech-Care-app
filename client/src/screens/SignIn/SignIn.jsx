@@ -119,7 +119,7 @@ const SignIn = (props) => {
 
           <div className='signin-button-redirect-link'>
             <Link to='/sign-up' id='signin-to-signup-link' >
-              <p className='signin-to-signup'>Not a user?Sign up here!</p>
+              <p className='signin-to-signup'>Not a user? Sign up <span>here!</span></p>
             </Link>
             <div className='signin-button'>
               {renderError()}
