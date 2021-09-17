@@ -13,14 +13,14 @@ const LaptopDetail = (props) => {
   // const [laptop, setLaptop] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const [isUpdated, setUpdated] = useState(false)
-  const history = useHistory()
   const { id } = useParams()
+  const history = useHistory()
   const [toggleFetch, setToggleFetch] = useState(false)
   const [laptop, setLaptop] = useState({
-    name: '',
-    description: '',
     image_url: '',
+    name: '',
     price: '',
+    description: '',
     buy_link: '',
     reviews: [],
   })
@@ -35,6 +35,7 @@ const LaptopDetail = (props) => {
   useEffect(() => {
     const fetchLaptop = async () => {
       const laptop = await getLaptop(id);
+      console.log(laptop)
       setLaptop(laptop);
       setLoaded(true);
     };
@@ -75,7 +76,7 @@ const LaptopDetail = (props) => {
       
       <div className="laptop-detail">
         <div className="detail">
-          <div className="name">{laptop.name}</div>
+          <h1>Description</h1>
           <div className="description">{laptop.description}</div>
           <h1>Specifications</h1>
           <h2>Processor: {laptop.processor}</h2>
@@ -98,7 +99,7 @@ const LaptopDetail = (props) => {
                 size={laptop.rating}
                 value={laptop.rating}
                 onChange={function (val) {
-                  console.log(val)
+                  // console.log(val)
                 }}
               />
             </div>
@@ -108,13 +109,15 @@ const LaptopDetail = (props) => {
                 <button className="editbutton">Edit</button>
               </Link>
 
-              <div>
-                <button
-                  className="delete-button"
-                  onClick={() => deleteLaptop(laptop._id)}
-                >
-                  Delete
-                </button>
+              <div >
+                <Link to='/laptops' id="deleteButton">
+                  <button
+                    className="delete-button"
+                    onClick={() => deleteLaptop(laptop._id)}
+                  >
+                    Delete
+                  </button>
+                </Link>
               </div>
 
             </div>
@@ -131,9 +134,11 @@ const LaptopDetail = (props) => {
           onChange={handleChange}
         />
         <Reviews reviews={laptop.reviews} />
+
         </div>
        
     </Layout>
+
   );
 };
 

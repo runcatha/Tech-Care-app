@@ -46,6 +46,9 @@
 .edit-button {
   text-decoration: none;
 }
+#deleteButton{
+  text-decoration: none;
+}
 
 .delete-button {
   display: flex;
@@ -57,6 +60,7 @@
   padding: 20px 70px;
   font-size: 20px;
   border-style: none;
+  text-decoration: none;
 }
 
 .price {
@@ -96,6 +100,16 @@ h2 {
 }
 .directLinkbutton:hover{
   transform: scale(1.1);
+}
+@media screen and (max-width: 1024px) {
+  .edit-button{
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .delete-button{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 @media screen and (max-width: 768px) {
